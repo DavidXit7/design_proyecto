@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login con pantalla dividida</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<main class="pantalla-dividida">
+
+    <section class="pantalla-dividida__formulario">
+        <h2 class="formulario__titulo">Iniciar sesión</h2>
+        <form class="formulario__contenido" action="/login" method="POST">
+            <div class="formulario__campo">
+                <label for="documento" class="formulario__label">Documento</label>
+                <input type="text" id="documento" name="documento" class="formulario__input" required />
+            </div>
+
+            <div class="formulario__campo">
+                <label for="usuario" class="formulario__label">Rol</label>
+                <select id="usuario" name="usuario" class="formulario__select" required>
+                    <option value="" disabled selected>Elige una opción</option>
+                    <option value="mesero">Mesero</option>
+                    <option value="cocina">Cocina</option>
+                    <option value="invitado">Invitado</option>
+                </select>
+            </div>
+
+            <div class="formulario__campo">
+                <label for="contraseña" class="formulario__label">Contraseña</label>
+                <input type="password" id="contraseña" name="contraseña" class="formulario__input" required />
+            </div>
+
+            <button type="submit" class="formulario__boton">Ingresar</button>
+        </form>
+    </section>
+
+    <section class="pantalla-dividida__imagen">
+        <img src="public/img/fondo_login.jpg" alt="Imagen decorativa" class="pantalla-dividida__imagen-contenido" />
+        
+        <div class="pantalla-dividida__texto">
+            <h1>NO GASTES ENERGIA EN LAS COSAS QUE NO TIENES EN CONTROL</h1>
+        </div>
+    </section>
+</main>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
