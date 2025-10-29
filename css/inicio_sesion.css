@@ -1,4 +1,3 @@
-
 *{
     margin: 0;
     padding: 0;
@@ -39,8 +38,7 @@
     display: block;
 }
 
-.formulario__input,
-.formulario__select {
+.formulario__input{
     width: 100%;
     padding: 8px;
     border: 1px solid #000000;

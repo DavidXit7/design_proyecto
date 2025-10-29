@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Login con pantalla dividida</title>
+    <title>Control habits</title>
     <link rel="stylesheet" href="style.css" />
 </head>
 <body>
@@ -13,19 +13,10 @@
     <section class="pantalla-dividida__formulario">
         <h2 class="formulario__titulo">Iniciar sesión</h2>
         <form class="formulario__contenido" action="/login" method="POST">
-            <div class="formulario__campo">
-                <label for="documento" class="formulario__label">Documento</label>
-                <input type="text" id="documento" name="documento" class="formulario__input" required />
-            </div>
 
             <div class="formulario__campo">
-                <label for="usuario" class="formulario__label">Rol</label>
-                <select id="usuario" name="usuario" class="formulario__select" required>
-                    <option value="" disabled selected>Elige una opción</option>
-                    <option value="mesero">Mesero</option>
-                    <option value="cocina">Cocina</option>
-                    <option value="invitado">Invitado</option>
-                </select>
+                <label for="usuario" class="formulario__label">Usuario</label>
+                <input id="usuario" name="usuario" class="formulario__input" required>
             </div>
 
             <div class="formulario__campo">
