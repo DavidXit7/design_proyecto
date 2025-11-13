@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Control habits</title>
+    <link rel="stylesheet" href="../css/components/registrar.css"/>
+</head>
+<body>
+
+<main class="contenedor">
+
+    <section class="pantalla-dividida__imagen">
+        <img src="../assets/img/inicio.png" alt="Imagen decorativa" class="pantalla-dividida__imagen-contenido" />
+        
+        <div class="pantalla-dividida__texto">
+            <h1>NO GASTES ENERGIA EN LAS COSAS QUE NO TIENES EN CONTROL</h1>
+        </div>
+    </section>
+
+    <section class="pantalla-dividida__formulario">
+        <h2 class="formulario__titulo">Registra tus datos y inicia</h2>
+        <form class="formulario__contenido" action="../" method="POST">
+
+            <div class="formulario__campo">
+                <label for="email" class="formulario__label">Email</label>
+                <input id="email" name="email" class="formulario__input" required>
+            </div>
+
+            <div class="formulario__campo">
+                <label for="usuario" class="formulario__label">Usuario</label>
+                <input id="usuario" name="usuario" class="formulario__input" required>
+            </div>
+
+            <div class="formulario__campo">
+                <label for="contraseña" class="formulario__label">Contraseña</label>
+                <input type="password" id="contraseña" name="contraseña" class="formulario__input" required />
+            </div>
+
+            <button type="submit" class="formulario__boton">Ingresar</button>
+
+            <div class="iniciar__sesion">
+                <p>¿Ya tienes una cuenta? <a class="iniciar__sesion--link" href="../index.html">Iniciar sesion</a></p>
+            </div>
+        </form>
+    </section>
+</main>
+
+</body>
+</html>
