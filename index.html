@@ -3,16 +3,20 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Control habits</title>
+    <title>Login</title>
     <link rel="stylesheet" href="../css/components/inicio_sesion.css"/>
 </head>
 <body>
 
 <main class="contenedor">
 
-    <section class="pantalla-dividida__formulario">
-        <h2 class="formulario__titulo">Bienvenido de nuevo!</h2>
-        <form class="formulario__contenido" action="" method="POST">
+    <div class="logo">
+        <h1 class="titulo__logo" >WARRIOR GYM</h1>
+        <img class="imagen__logo" src="assets/img/logo_power.png" alt="logo_gym">
+    </div>
+
+    <section class="formulario">
+        <form class="formulario__contenido" action="../view/vista_administrador.html">
 
             <div class="formulario__campo">
                 <label for="usuario" class="formulario__label">Usuario</label>
@@ -25,23 +29,11 @@
             </div>
 
             <div class="olvido__contraseña">
-                <a class="olvido__contraseña--link" href="../view/olvidaste_contraseña.html">¿Olvidaste la contraseña?</a>
+                <a class="olvido__contraseña--link" href="../view/olvidaste_contrasena.html">¿Olvidaste la contraseña?</a>
             </div>
 
             <button type="submit" class="formulario__boton">Ingresar</button>
-
-            <div class="registro__link">
-                <p>No tienes una cuenta? <a class="registrate__link" href="../view/registrar.html">Registrate</a></p>
-            </div>
         </form>
-    </section>
-
-    <section class="pantalla-dividida__imagen">
-        <img src="assets/img/fondo_login.jpg" alt="Imagen decorativa" class="pantalla-dividida__imagen-contenido" />
-        
-        <div class="pantalla-dividida__texto">
-            <h1>NO GASTES ENERGIA EN LAS COSAS QUE NO TIENES EN CONTROL</h1>
-        </div>
     </section>
 </main>
 
