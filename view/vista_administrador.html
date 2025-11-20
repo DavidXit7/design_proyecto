@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Panel administrador</title>
     <link rel="stylesheet" href="../css/components/vista_administrador.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body class="body">
     <header class="header"> 
@@ -14,18 +15,31 @@
         </div>
     <nav class="nav__header">
         <ul class="header__lista">
-            <li class="header__lista--link">admin01</li>
-            <li class="header__lista--link">administrador</li>
-            <li class="header__lista--link"><a class="header__links" href="../index.html">cerrar sesion</a></li>
+            <div class="header__lista--link">
+                <li>admin01</li>
+            </div>
+
+            <div class="header__lista--link">
+                <li>administrador</li>
+            </div>
+            <li><a class="header__links" href="../index.html">cerrar sesion<i class="fas fa-door-open"></i></a></li>
         </ul>
     </nav>
     </header>
 
     <aside class="sidebar">
         <nav class="sidebar__nav">
-            <ul class="sidebar__list--link">Registrar recepcionistas</ul>
-            <ul class="sidebar__list--link">Crear membresias</ul>
-            <ul class="sidebar__list--link">Ver estadisticas</ul>
+            <div class="boton__sidebar--nav">
+                <a class="sidebar__lista--link" href="#">Registrar recepcionistas</a>
+            </div>
+
+            <div class="boton__sidebar--nav">
+                <a class="sidebar__lista--link" href="#">Crear membresias</a>
+            </div>
+
+            <div class="boton__sidebar--nav">
+                <a class="sidebar__lista--link" href="#">Ver estadisticas</a>
+            </div>
         </nav>
     </aside>
 
