@@ -43,16 +43,25 @@
 
 .header__lista{
     display: flex;
-    gap: 30px;
+    gap: 20px;
     font-size: 18px;
     font-weight: bold;
     list-style: none;
 }
 
 .header__links{
+    display: flex;
     text-decoration: none;
+    margin-right: 20px;
+    color: var(--color-letra-boton);
+    gap: 10px;
+    align-items: center;
 }
 
+.header__lista--link{
+    border-right: solid 2px #000;
+    padding-right: 20px;
+}
 
 .sidebar{
     grid-area: sidebar;
@@ -65,7 +74,26 @@
 }
 
 .sidebar__nav{
-    line-height: 100px;
+    display: flex;
+    flex-direction: column;
+    gap: 70px;
+}
+
+.boton__sidebar--nav{
+    border: solid 1px #000;
+    background-color: var(--color-fondo-boton-vista-admin);
+    border-radius: 16px;
+}
+
+.sidebar__lista--link{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    color: var(--color-letra-boton-vista-admin);
+    padding: 20px 20px;
+    width: 100%;
+    font-weight: bold;
 }
 
 .main{
@@ -75,6 +103,6 @@
     line-height: 100px;
     justify-content: center;
     align-items: center;
-    font-size: 18px;
+    font-size: 25px;
     border: solid 1px #000000;
 }
