@@ -139,6 +139,6 @@
     text-decoration: none;
     color: var(--color-letra-boton);
     border-radius: 10px;
-    background-color: var(--color-fondo-boton-visualizar);
+    background-color: var(--color-fondo-boton-evento);
     font-weight: bold;
 }

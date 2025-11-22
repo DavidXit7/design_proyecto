@@ -144,7 +144,7 @@
     border-radius: 10px;
     border: solid 2px var(--color-borde-botones);
     cursor: pointer;
-    background-color: var(--color-fondo-boton-registrar);
+    background-color: var(--color-fondo-boton-evento);
     font-weight: 800;
 }
 
