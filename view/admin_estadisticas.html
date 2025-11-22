@@ -44,37 +44,21 @@
     </aside>
 
     <main class="main">
-        <h2 class="formulario__titulo">Crea tus propias membresias!</h2>
-        
-        <form class="formulario" action="">
-            <div class="campo_membresia">
-                <label for="membresia" class="formulario__label">Tipo de membresia</label>
-                <select name="membresia" id="membresia" class="formulario__input">
-                    <option value="">Seleccione una membresia</option>
-                    <option value="mensual">Mensual</option>
-                    <option value="trimestral">Trimestral</option>
-                    <option value="semestral">Semestral</option>
-                    <option value="anual">Anual</option>
-                </select>
+        <h2 class="formulario__titulo">Selecciona la estadistica que quieres ver!</h2>
+        <section class="estadisticas__contenedor">
+            <div class="estadistica__card">
+                <h3>Resumen membresias activas</h3>
+                <a href="#" class="estadistica__boton">Visualizar</a>
             </div>
-
-            <div class="campo_meses">
-                <label for="number" class="formulario__label">Duracion en meses</label>
-                <input id="number" name="number" class="formulario__input" required>
+            <div class="estadistica__card">
+                <h3>Ingresos por tipo de membresia</h3>
+                <a href="#" class="estadistica__boton">Visualizar</a>
             </div>
-
-            <div class="campo_precio">
-                <label for="precio" class="formulario__label">Precio</label>
-                <input id="precio" name="precio" class="formulario__input" required>
+            <div class="estadistica__card">
+                <h3>Ventas por membresias en el mes</h3>
+                <a href="#" class="estadistica__boton">Visualizar</a>
             </div>
-
-            <div class="campo_descripcion">
-                <label for="descripcion" class="formulario__label">Descripcion</label>
-                <textarea name="descripcion" class="formulario__textarea" id="descripcion" maxlength="500"></textarea>
-            </div> 
-        
-            <button type="submit" class="formulario__boton">Crear</button>
-        </form>
+        </section>
     </main>
 </body>
 </html>
