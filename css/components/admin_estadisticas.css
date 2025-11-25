@@ -101,10 +101,10 @@
     flex-direction: column;
     align-items: center;
     border: solid 1px #000000;
+    justify-content: center;
 }
 
 .formulario__titulo{
-    margin-top: 30px;
     margin-bottom: 50px;
     font-size: 22px;
 }
