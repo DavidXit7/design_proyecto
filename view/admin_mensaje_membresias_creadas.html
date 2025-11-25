@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panel administrador</title>
+    <link rel="stylesheet" href="../css/components/admin_mensaje_membresia_creada.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body class="body">
+    <header class="header"> 
+        <div class="logo_container">
+            <img class="header__logo" src="../assets/img/logo_power.png" alt="warrior_gym">
+            <h1 class="titulo__logo">WARRIOR GYM</h1>
+        </div>
+    <nav class="nav__header">
+        <ul class="header__lista">
+            <div class="header__lista--link">
+                <li>admin01</li>
+            </div>
+
+            <div class="header__lista--link">
+                <li>administrador</li>
+            </div>
+            <li><a class="header__links" href="../index.html">cerrar sesion<i class="fas fa-door-open"></i></a></li>
+        </ul>
+    </nav>
+    </header>
+
+    <aside class="sidebar">
+        <nav class="sidebar__nav">
+            <div class="boton__sidebar--nav">
+                <a class="sidebar__lista--link" href="#">Registrar recepcionistas</a>
+            </div>
+
+            <div class="boton__sidebar--nav">
+                <a class="sidebar__lista--link" href="/view/admin_membresias.html">Crear membresias</a>
+            </div>
+
+            <div class="boton__sidebar--nav">
+                <a class="sidebar__lista--link" href="/view/admin_estadisticas.html">Ver estadisticas</a>
+            </div>
+        </nav>
+    </aside>
+
+    <main class="main">
+        <h2 class="formulario__titulo">Registra los recepcionistas que quieras!</h2>
+        
+        <form class="formulario" action="">
+            <div class="campo_nombre">
+                <label for="name" class="formulario__label">Nombre completo</label>
+                <input id="name" name="name" class="formulario__input" required>
+            </div>
+
+            <div class="campo_usuario">
+                <label for="username" class="formulario__label">Usuario</label>
+                <input id="username" name="username" class="formulario__input" required>
+            </div>
+
+            <div class="campo_correo">
+                <label for="email" class="formulario__label">Correo</label>
+                <input id="email" name="email" class="formulario__input" required>
+            </div>
+
+            <div class="campo_contraseña">
+                <label for="password" class="formulario__label">Contraseña</label>
+                <input id="password" name="password" class="formulario__input" required>
+            </div>
+
+            <div class="campo_rol">
+                <label for="rol" class="formulario__label">Rol</label>
+                <select name="rol" id="rol" class="formulario__input">
+                    <option value="">Seleccione un rol</option>
+                    <option value="recepcionista">Recepcionista</option>
+                </select>
+            </div>
+
+            <button type="submit" class="formulario__boton">Registrar</button>
+        </form>
+
+        <div class="ventana">
+            <div class="mensaje__ventana">
+                <p>¡Membresia creada con éxito!</p>
+                <a href="admin_vista_membresias_creadas.html" class="cerrar">Cerrar</a>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
