@@ -101,6 +101,7 @@
     flex-direction: column;
     align-items: center;
     border: solid 1px #000000;
+    justify-content: center;
 }
 
 .formulario__titulo{
@@ -158,8 +159,7 @@ option {
     justify-content: center;
     align-items: center;
     position: absolute;
-    margin-top: 200px;
-    height: 200px;
+    height: 231px;
     width: 535px;
     border: solid 2px var(--color-borde-botones);
     border-radius: 20px;
