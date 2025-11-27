@@ -98,9 +98,15 @@
 .main{
     grid-area: main;
     display: flex;
+    flex-direction: column;
     align-items: center;
     border: solid 1px #000000;
     justify-content: center;
+}
+
+.titulo__main{
+    display: flex;
+    margin-bottom: 70px;
 }
 
 .main__grafico{
@@ -167,36 +173,11 @@
     background-color: #68ffd2;
 }
 
-.barra__grafico_5 {
-    writing-mode: vertical-rl;
-    transform: rotate(180deg);
-    justify-content: center;
-    display: flex;
-    border: solid 1px #333;
-    border-top: none;
-    height: 350px;
-    width: 60px;
-    align-items: center;
-    background-color: #6898ff;
-}
-
-.barra__grafico_6 {
-    writing-mode: vertical-rl;
-    transform: rotate(180deg);
-    justify-content: center;
-    display: flex;
-    border: solid 1px #333;
-    border-top: none;
-    height: 320px;
-    width: 60px;
-    align-items: center;
-    background-color: #ff68c0;
-}
 
 .numeros__grafico{
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: space-around;
-    gap: 13px;
+    gap: 20px;
     margin-right: 10px;
 }
