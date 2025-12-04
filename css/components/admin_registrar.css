@@ -45,7 +45,7 @@
     display: flex;
     gap: 20px;
     font-size: 18px;
-    font-weight: bold;
+    font-weight: 500;
     list-style: none;
 }
 
@@ -80,6 +80,7 @@
 }
 
 .boton__sidebar--nav{
+    border: solid 2px var(--color-borde-botones);
     background-color: var(--color-fondo-boton-vista-admin);
     border-radius: 16px;
 }
@@ -102,6 +103,7 @@
     align-items: center;
     border: solid 1px #000000;
     justify-content: center;
+    background-color: var(--color-fondo);
 }
 
 .formulario__titulo{
@@ -115,6 +117,7 @@
     margin: 30px;
     border: solid 2px var(--color-borde-formulario);
     border-radius: 20px;
+    background-color: rgb(255, 255, 255);
 }
 
 .formulario__label {
@@ -129,7 +132,7 @@
     margin-bottom: 10px;
     width: 500px;
     padding: 8px;
-    border: 2px solid var(--color-borde-formulario);
+    border: 1px solid var(--color-borde-formulario);
     border-radius: 10px;
     height: 38px;
 }

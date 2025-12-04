@@ -80,6 +80,7 @@
 }
 
 .boton__sidebar--nav{
+    border: solid 2px var(--color-borde-botones);
     background-color: var(--color-fondo-boton-vista-admin);
     border-radius: 16px;
 }
@@ -102,6 +103,7 @@
     align-items: center;
     border: solid 1px #000000;
     justify-content: center;
+    background-color: var(--color-fondo);
 }
 
 .main__titulo{

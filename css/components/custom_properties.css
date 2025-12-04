@@ -2,14 +2,14 @@
 
 :root{
     --fuente-letra: "Poppins", sans-serif;
-    --color-fondo: #fff;
-    --color-fondo-sidebar: #000;
+    --color-fondo: rgb(240, 248, 255);
+    --color-fondo-sidebar: #2F3E46;
     --color-letra: #fff;
     --color-borde-formulario: #000;
     --color-fondo-boton: #000;
     --color-letra-boton-vista-admin: #000;
-    --color-fondo-boton-vista-admin: #fff;
-    --color-fondo-boton-evento: rgb(119, 187, 255);
+    --color-fondo-boton-vista-admin: #C6F1AB;
+    --color-fondo-boton-evento: rgb(139, 170, 255);
     --color-fondo-option-rol: #f0f0f0;
     --color-borde-botones: #000;
     --color-marco-main: #000;
