@@ -117,7 +117,7 @@
     margin: 30px;
     border: solid 2px var(--color-borde-formulario);
     border-radius: 20px;
-    background-color: rgb(255, 255, 255);
+    background-color: var(--color-fondo-formulario);
 }
 
 .formulario__label {
