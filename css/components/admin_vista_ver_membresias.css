@@ -120,6 +120,7 @@
     flex-direction: column;
     justify-content: space-between;
     border: solid 2px var(--color-borde-card);
+    background-color: var(--color-fondo-card);
     border-radius: 20px ;
     margin: 20px;
     padding: 15px;
