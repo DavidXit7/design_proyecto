@@ -80,6 +80,11 @@
     margin-top: 10px;
 }
 
+.formulario__boton:hover{
+    background-color: var(--color-fondo-boton-vista-admin);
+    color: var(--color-letra-boton-vista-admin);
+}
+
 .olvido__contraseña{
     display: flex;
     justify-content: flex-end;

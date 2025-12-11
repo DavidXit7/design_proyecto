@@ -88,31 +88,34 @@
 
         <div class="contenedor_formulario">
             <form class="formulario" action="recepcionista_cliente_actualizado.html">
-                <div class="campo_membresia">
-                    <label for="membresia" class="formulario__label">Tipo de membresia</label>
-                    <select name="membresia" id="membresia" class="formulario__input">
-                        <option value="">Seleccione una membresia</option>
+                <div class="campo_id">
+                    <label for="id" class="formulario__label">Documento</label>
+                    <input id="id" name="id" class="formulario__input" required>
+                </div>
+
+                <div class="campo_nombre">
+                    <label for="name" class="formulario__label">Nombre</label>
+                    <input id="name" name="name" class="formulario__input" required>
+                </div>
+
+                <div class="campo_correo">
+                    <label for="email" class="formulario__label">Correo</label>
+                    <input id="email" name="email" class="formulario__input" required>
+                </div>
+
+                <div class="campo_telefono">
+                    <label for="number" class="formulario__label">Telefono</label>
+                    <input id="number" name="number" class="formulario__input" required>
+                </div>
+
+                <div class="campo_tipo_membresia">
+                    <label for="membresia" class="formulario__label">Tipo de membresia adquirida</label>
+                    <select name="membresia" id="membresia" class="formulario__input" disabled>
                         <option value="mensual">Mensual</option>
                         <option value="trimestral">Trimestral</option>
                         <option value="semestral">Semestral</option>
                         <option value="anual">Anual</option>
                     </select>
-                </div>
-
-                <div class="campo_meses">
-                    <label for="number" class="formulario__label">Duracion en meses</label>
-                    <input id="number" name="number" class="formulario__input" required>
-                </div>
-
-                <div class="campo_precio">
-                    <label for="precio" class="formulario__label">Precio</label>
-                    <input id="precio" name="precio" class="formulario__input" required>
-                </div>
-
-                <div class="campo_descripcion">
-                    <label for="descripcion" class="formulario__label">Descripcion</label>
-                    <textarea name="descripcion" class="formulario__textarea" id="descripcion"
-                        maxlength="500"></textarea>
                 </div>
 
                 <button type="submit" class="formulario__boton">Actualizar</button>

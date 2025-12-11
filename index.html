@@ -19,8 +19,17 @@
         <form class="formulario__contenido" action="../view/vista_administrador.html">
 
             <div class="formulario__campo">
-                <label for="usuario" class="formulario__label">Usuario</label>
+                <label for="usuario" class="formulario__label">Documento</label>
                 <input id="usuario" name="usuario" class="formulario__input" required>
+            </div>
+
+            <div class="formulario__campo">
+                <label for="rol" class="formulario__label">Rol</label>
+                <select name="rol" id="rol" class="formulario__input">
+                    <option value="">Seleccione un rol</option>
+                    <option value="recepcionista">Administrador</option>
+                    <option value="recepcionista">Recepcionista</option>
+                </select>
             </div>
 
             <div class="formulario__campo">
@@ -29,9 +38,8 @@
             </div>
 
             <div class="olvido__contraseña">
-                <a class="olvido__contraseña--link" href="../view/olvidaste_contrasena.html">¿Olvidaste la contraseña?</a>
+                <a class="olvido__contraseña--link" href="../view/enviar_codigo.html">¿Olvidaste la contraseña?</a>
             </div>
-
             <button type="submit" class="formulario__boton">Ingresar</button>
         </form>
     </section>
