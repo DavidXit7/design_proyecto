@@ -45,10 +45,12 @@
 
     <main class="main">
         <h2 class="formulario__titulo">Siempre consulta antes de dejar ingresar!</h2>
-        <div class="buscador">
-            <form class="formulario__buscador" action="">
-                <input type="text" id="barra__busqueda" class="barra__busqueda" placeholder="Ingresa un documento" required>
-                <button type="submit" class="boton__buscar">Buscar</button>
+        <form class="formulario__buscador" action="recepcionista_cliente_encontrado.html">
+            <div class="buscador__fila">
+                <input type="text" class="barra__busqueda" placeholder="Ingresa un documento" required>
+                <a href="recepcionista_validar_acceso.html" class="boton__limpiar">Limpiar</a>
+            </div>
+            <button type="submit" class="boton__buscar">Buscar</button>
                 <div class="card__cliente">
                     <div class="card__header">
                         <h1 class="titulo__card">Cliente con acceso</h1>
@@ -61,7 +63,6 @@
                     <img class="card__image" src="/assets/img/check.png" alt="">
                 </div>
             </form>
-        </div>
     </main>
 </body>
 </html>

@@ -38,20 +38,20 @@
             </div>
 
             <div class="boton__sidebar--nav">
-                <a class="sidebar__lista--link" href="">Consultar estado clientes</a>
+                <a class="sidebar__lista--link" href="recepcionista_consultar_estado_cliente.html">Consultar estado clientes</a>
             </div>
         </nav>
     </aside>
 
     <main class="main">
         <h2 class="formulario__titulo">Siempre consulta antes de dejar ingresar!</h2>
-        <div class="buscador">
-            <form class="formulario__buscador" action="recepcionista_cliente_encontrado.html">
+        <form class="formulario__buscador" action="recepcionista_cliente_encontrado.html">
+            <div class="buscador__fila">
                 <input type="text" class="barra__busqueda" placeholder="Ingresa un documento" required>
-                <button type="submit" class="boton__buscar">Buscar</button>
-                
-            </form>
-        </div>
+                <button type="reset" class="boton__limpiar">Limpiar</button>
+            </div>
+            <button type="submit" class="boton__buscar">Buscar</button>
+        </form>
     </main>
 </body>
 </html>

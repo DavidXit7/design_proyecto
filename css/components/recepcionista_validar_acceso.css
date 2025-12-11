@@ -111,36 +111,26 @@
     margin-bottom: 14px;
 }
 
-.buscador{
-    display: flex;
-    border: 2px solid var(--color-borde-formulario);
-    border-radius: 20px;
-    height: 60vh;
-    width: 50vw;
-    padding: 30px;
-    background-color: var(--color-fondo-formulario);
-}
-
-.formulario__buscador{
+.formulario__buscador {
     display: flex;
     flex-direction: column;
-    width: 100%;
     align-items: center;
     gap: 10px;
+    width: 80%;
 }
 
 .barra__busqueda{
-    height: 55px;
+    height: 49px;
     width: 90%;
-    border-radius: 20px;
+    border-radius: 18px;
     padding: 10px;
     font-size: 14px;
     border: 1px solid;
 }
 
 .boton__buscar{
-    height: 34px;
-    width: 90%;
+    height: 46px;
+    width: 100%;
     border-radius: 10px;
     font-size: 17px;
     background-color: var(--color-fondo-boton-evento);
@@ -152,4 +142,33 @@
     background-color: var(--color-fondo-boton-vista-admin);
     transition: all 0.3s ease;
     transform: scale(1.03);
+}
+
+.boton__limpiar {
+    height: 42px;
+    width: 70%;
+    border-radius: 10px;
+    font-size: 17px;
+    background-color: #e74c3c; /* Color rojo para diferenciar */
+    border: 2px solid var(--color-borde-botones);
+    font-weight: 900;
+    color: white;
+    cursor: pointer;
+}
+
+.boton__limpiar:hover {
+    background-color: #c0392b;
+    transition: all 0.3s ease;
+    transform: scale(1.03);
+}
+.buscador__fila {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+}
+
+.boton__buscar {
+    width: 70%;
+    align-self: center;
 }
