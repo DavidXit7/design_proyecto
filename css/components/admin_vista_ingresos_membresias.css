@@ -59,7 +59,7 @@
 }
 
 .header__lista--link {
-    border-right: solid 2px #000;
+    border-right: solid 2px var(--color-negro);
     padding-right: 20px;
 }
 
@@ -101,7 +101,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    border: solid 1px #000000;
+    border: solid 1px var(--color-marco-main);
     justify-content: center;
     background-color: var(--color-fondo);
     gap: 30px;
@@ -117,8 +117,8 @@
     display: flex;
     align-items: center;
     gap: 50px;
-    background-color: #fff;
-    border: 2px solid #333;
+    background-color: var(--color-fondo-card);
+    border: 2px solid var(--color-gris-oscuro);
     border-radius: 10px;
     padding: 30px;
 }
@@ -127,11 +127,11 @@
     width: 300px;
     height: 300px;
     border-radius: 50%;
-    border: 2px solid #333;
-    background: conic-gradient(#ffda60 0% 30%,
-            #3ec2ff 30% 50%,
-            #cb72ff 50% 80%,
-            #68ffd2 80% 100%);
+    border: 2px solid var(--color-gris-oscuro);
+    background: conic-gradient(var(--color-membresia-mensual) 0% 30%,
+            var(--color-membresia-trimestral) 30% 50%,
+            var(--color-membresia-semestral) 50% 80%,
+            var(--color-membresia-anual) 80% 100%);
 }
 
 .leyenda__pie {
@@ -150,7 +150,7 @@
     width: 24px;
     height: 24px;
     border-radius: 4px;
-    border: 1px solid #333;
+    border: 1px solid var(--color-gris-oscuro);
 }
 
 .leyenda__texto {
@@ -165,34 +165,34 @@
 
 .leyenda__porcentaje {
     font-size: 14px;
-    color: #666;
+    color: var(--color-gris-medio);
 }
 
 .leyenda__color--mensual {
-    background-color: #ffda60;
+    background-color: var(--color-membresia-mensual);
 }
 
 .leyenda__color--trimestral {
-    background-color: #3ec2ff;
+    background-color: var(--color-membresia-trimestral);
 }
 
 .leyenda__color--semestral {
-    background-color: #cb72ff;
+    background-color: var(--color-membresia-semestral);
 }
 
 .leyenda__color--anual {
-    background-color: #68ffd2;
+    background-color: var(--color-membresia-anual);
 }
 
 .total__ingresos {
     font-size: 20px;
-    background-color: #fff;
+    background-color: var(--color-fondo-card);
     padding: 15px 30px;
-    border: 2px solid #333;
+    border: 2px solid var(--color-gris-oscuro);
     border-radius: 10px;
 }
 
 .total__valor {
     font-weight: bold;
-    color: #2e7d32;
+    color: var(--color-letra-exito);
 }

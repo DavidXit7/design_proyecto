@@ -59,7 +59,7 @@
 }
 
 .header__lista--link {
-    border-right: solid 2px #000;
+    border-right: solid 2px var(--color-negro);
     padding-right: 20px;
 }
 
@@ -101,7 +101,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    border: solid 1px #000000;
+    border: solid 1px var(--color-marco-main);
     justify-content: center;
     background-color: var(--color-fondo);
     gap: 30px;
@@ -115,8 +115,8 @@
 
 .grafico__contenedor {
     display: flex;
-    background-color: #fff;
-    border: 2px solid #333;
+    background-color: var(--color-fondo-card);
+    border: 2px solid var(--color-gris-oscuro);
     border-radius: 10px;
     padding: 20px;
     width: 70%;
@@ -129,7 +129,7 @@
     justify-content: space-between;
     padding-right: 10px;
     font-size: 14px;
-    color: #666;
+    color: var(--color-gris-medio);
     height: 250px;
 }
 
@@ -137,8 +137,8 @@
     display: flex;
     flex-direction: column;
     flex: 1;
-    border-left: 2px solid #333;
-    border-bottom: 2px solid #333;
+    border-left: 2px solid var(--color-gris-oscuro);
+    border-bottom: 2px solid var(--color-gris-oscuro);
 }
 
 .linea__svg {
@@ -148,21 +148,21 @@
 }
 
 .grid__linea {
-    stroke: #e0e0e0;
+    stroke: var(--color-gris-claro);
     stroke-width: 1;
 }
 
 .linea__ventas {
     fill: none;
-    stroke: #3ec2ff;
+    stroke: var(--color-membresia-trimestral);
     stroke-width: 3;
     stroke-linecap: round;
     stroke-linejoin: round;
 }
 
 .punto__ventas {
-    fill: #3ec2ff;
-    stroke: #fff;
+    fill: var(--color-membresia-trimestral);
+    stroke: var(--color-blanco);
     stroke-width: 2;
 }
 
@@ -171,7 +171,7 @@
     justify-content: space-around;
     padding-top: 10px;
     font-size: 14px;
-    color: #666;
+    color: var(--color-gris-medio);
 }
 
 .resumen__ventas {
@@ -180,9 +180,9 @@
 }
 
 .resumen__item {
-    background-color: #fff;
+    background-color: var(--color-fondo-card);
     padding: 15px 25px;
-    border: 2px solid #333;
+    border: 2px solid var(--color-gris-oscuro);
     border-radius: 10px;
     display: flex;
     flex-direction: column;
@@ -192,11 +192,11 @@
 
 .resumen__label {
     font-size: 14px;
-    color: #666;
+    color: var(--color-gris-medio);
 }
 
 .resumen__valor {
     font-size: 24px;
     font-weight: bold;
-    color: #3ec2ff;
+    color: var(--color-membresia-trimestral);
 }

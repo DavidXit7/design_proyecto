@@ -1,19 +1,51 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
-:root{
+:root {
+    /* ===== TIPOGRAFIA ===== */
     --fuente-letra: "Poppins", sans-serif;
+
+    /* ===== COLORES BASE ===== */
+    --color-negro: #000;
+    --color-blanco: #fff;
+    --color-gris-oscuro: #333;
+    --color-gris-medio: #666;
+    --color-gris-claro: #e0e0e0;
+    --color-gris-fondo: #f0f0f0;
+    --color-gris-tabla: #ddd;
+    --color-gris-tabla-hover: #f2f2f2;
+
+    /* ===== COLORES DE FONDO ===== */
     --color-fondo: rgb(240, 248, 255);
     --color-fondo-sidebar: #2F3E46;
-    --color-letra: #fff;
-    --color-borde-formulario: #000;
     --color-fondo-boton: #000;
-    --color-letra-boton-vista-admin: #000;
     --color-fondo-boton-vista-admin: #C6F1AB;
     --color-fondo-boton-evento: rgb(139, 170, 255);
+    --color-fondo-boton-limpiar-hover: #b96dff;
+    --color-fondo-boton-eliminar: #e74c3c;
+    --color-fondo-boton-eliminar-hover: #c0392b;
     --color-fondo-option-rol: #f0f0f0;
+    --color-fondo-formulario: #fff;
+    --color-fondo-card: #fff;
+    --color-fondo-ventana: #f0fdf4;
+
+    /* ===== COLORES DE TEXTO ===== */
+    --color-letra: #fff;
+    --color-letra-boton-vista-admin: #000;
+    --color-letra-exito: #2e7d32;
+
+    /* ===== COLORES DE BORDES ===== */
+    --color-borde-formulario: #000;
     --color-borde-botones: #000;
     --color-marco-main: #000;
     --color-borde-card: #000;
-    --color-fondo-formulario: #fff;
-    --color-fondo-card: #fff;
+
+    /* ===== COLORES MEMBRESIAS (GRAFICOS) ===== */
+    --color-membresia-mensual: #ffda60;
+    --color-membresia-trimestral: #3ec2ff;
+    --color-membresia-semestral: #cb72ff;
+    --color-membresia-anual: #68ffd2;
+
+    /* ===== COLORES OVERLAY ===== */
+    --color-overlay: rgba(0, 0, 0, 0.5);
+    --color-overlay-borde: rgba(0, 0, 0, 0.1);
 }

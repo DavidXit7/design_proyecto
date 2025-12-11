@@ -1,47 +1,47 @@
 @import url(../components/custom_properties.css);
 
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-.body{
+.body {
     display: grid;
     grid-template-columns: 1fr 3fr;
     grid-template-rows: 90px 2fr;
     height: 100vh;
     font-family: var(--fuente-letra);
-    grid-template-areas: 
+    grid-template-areas:
         "header header"
         "sidebar main";
 }
 
-.header{
+.header {
     grid-area: header;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-.logo_container{
+.logo_container {
     display: flex;
     gap: 10px;
     align-items: center;
 }
 
-.header__logo{
+.header__logo {
     width: 90px;
     height: 90px;
     object-fit: contain;
 }
 
-.nav__header{
+.nav__header {
     display: flex;
     align-items: center;
 }
 
-.header__lista{
+.header__lista {
     display: flex;
     gap: 20px;
     font-size: 18px;
@@ -49,7 +49,7 @@
     list-style: none;
 }
 
-.header__links{
+.header__links {
     display: flex;
     text-decoration: none;
     margin-right: 20px;
@@ -58,12 +58,12 @@
     align-items: center;
 }
 
-.header__lista--link{
-    border-right: solid 2px #000;
+.header__lista--link {
+    border-right: solid 2px var(--color-negro);
     padding-right: 20px;
 }
 
-.sidebar{
+.sidebar {
     grid-area: sidebar;
     display: flex;
     background-color: var(--color-fondo-sidebar);
@@ -73,19 +73,19 @@
     color: var(--color-letra)
 }
 
-.sidebar__nav{
+.sidebar__nav {
     display: flex;
     flex-direction: column;
     gap: 70px;
 }
 
-.boton__sidebar--nav{
+.boton__sidebar--nav {
     border: solid 2px var(--color-borde-botones);
     background-color: var(--color-fondo-boton-vista-admin);
     border-radius: 16px;
 }
 
-.sidebar__lista--link{
+.sidebar__lista--link {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -96,55 +96,55 @@
     font-weight: bold;
 }
 
-.main{
+.main {
     grid-area: main;
     display: flex;
     flex-direction: column;
     align-items: center;
-    border: solid 1px #000000;
+    border: solid 1px var(--color-marco-main);
     justify-content: center;
     background-color: var(--color-fondo);
     gap: 30px;
     padding: 20px;
 }
 
-.titulo__main{
+.titulo__main {
     font-size: 28px;
     color: var(--color-letra-boton-vista-admin);
 }
 
-.grafico__contenedor{
+.grafico__contenedor {
     display: flex;
-    background-color: #fff;
-    border: 2px solid #333;
+    background-color: var(--color-fondo-card);
+    border: 2px solid var(--color-gris-oscuro);
     border-radius: 10px;
     padding: 20px;
     width: 70%;
     max-width: 700px;
 }
 
-.eje-y{
+.eje-y {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     padding-right: 10px;
     font-size: 14px;
-    color: #666;
+    color: var(--color-gris-medio);
     height: 300px;
 }
 
-.barras__contenedor{
+.barras__contenedor {
     display: flex;
     justify-content: space-around;
     align-items: flex-end;
     flex: 1;
     height: 300px;
-    border-left: 2px solid #333;
-    border-bottom: 2px solid #333;
+    border-left: 2px solid var(--color-gris-oscuro);
+    border-bottom: 2px solid var(--color-gris-oscuro);
     padding: 0 20px;
 }
 
-.barra__grupo{
+.barra__grupo {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -152,7 +152,7 @@
     justify-content: flex-end;
 }
 
-.barra{
+.barra {
     width: 60px;
     border-radius: 8px 8px 0 0;
     display: flex;
@@ -162,68 +162,68 @@
     transition: height 0.3s ease;
 }
 
-.barra__valor{
-    color: #fff;
+.barra__valor {
+    color: var(--color-blanco);
     font-weight: bold;
     font-size: 14px;
 }
 
-.barra__label{
+.barra__label {
     margin-top: 10px;
     font-size: 14px;
-    color: #333;
+    color: var(--color-gris-oscuro);
     font-weight: 500;
 }
 
-.barra--mensual{
-    background-color: #ffda60;
+.barra--mensual {
+    background-color: var(--color-membresia-mensual);
 }
 
-.barra--trimestral{
-    background-color: #3ec2ff;
+.barra--trimestral {
+    background-color: var(--color-membresia-trimestral);
 }
 
-.barra--semestral{
-    background-color: #cb72ff;
+.barra--semestral {
+    background-color: var(--color-membresia-semestral);
 }
 
-.barra--anual{
-    background-color: #68ffd2;
+.barra--anual {
+    background-color: var(--color-membresia-anual);
 }
 
-.leyenda{
+.leyenda {
     display: flex;
     gap: 30px;
     flex-wrap: wrap;
     justify-content: center;
 }
 
-.leyenda__item{
+.leyenda__item {
     display: flex;
     align-items: center;
     gap: 8px;
     font-size: 14px;
 }
 
-.leyenda__color{
+.leyenda__color {
     width: 20px;
     height: 20px;
     border-radius: 4px;
-    border: 1px solid #333;
+    border: 1px solid var(--color-gris-oscuro);
 }
 
-.leyenda__color--mensual{
-    background-color: #ffda60;
+.leyenda__color--mensual {
+    background-color: var(--color-membresia-mensual);
 }
 
-.leyenda__color--trimestral{
-    background-color: #3ec2ff;
+.leyenda__color--trimestral {
+    background-color: var(--color-membresia-trimestral);
 }
 
-.leyenda__color--semestral{
-    background-color: #cb72ff;
+.leyenda__color--semestral {
+    background-color: var(--color-membresia-semestral);
 }
 
-.leyenda__color--anual{
-    background-color: #68ffd2;
+.leyenda__color--anual {
+    background-color: var(--color-membresia-anual);
 }
