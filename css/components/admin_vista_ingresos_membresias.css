@@ -1,198 +1,330 @@
+/* importa las variables personalizadas desde custom_properties.css */
 @import url(../components/custom_properties.css);
 
+/* selector universal para resetear margenes y relleno */
 * {
+    /* elimina el margen por defecto */
     margin: 0;
+    /* elimina el relleno por defecto */
     padding: 0;
+    /* incluye el borde y el relleno en el tamano total del elemento */
     box-sizing: border-box;
 }
 
+/* estilo para el cuerpo de la pagina usando grid */
 .body {
+    /* usa grid layout */
     display: grid;
+    /* define dos columnas: una de 1 fraccion y otra de 3 fracciones */
     grid-template-columns: 1fr 3fr;
+    /* define filas: cabecera de 90px y cuerpo de 2 fracciones */
     grid-template-rows: 90px 2fr;
+    /* altura del 100% de la ventana */
     height: 100vh;
+    /* fuente principal */
     font-family: var(--fuente-letra);
+    /* areas del grid: cabecera arriba, sidebar izquierda, main derecha */
     grid-template-areas:
         "header header"
         "sidebar main";
 }
 
+/* estilo para la cabecera del dashboard */
 .header {
+    /* asigna al area header */
     grid-area: header;
+    /* flexbox para distribuir contenido */
     display: flex;
+    /* espacio entre elementos */
     justify-content: space-between;
+    /* alineacion vertical centrada */
     align-items: center;
 }
 
+/* contenedor del logo en la cabecera */
 .logo_container {
+    /* usa flexbox */
     display: flex;
+    /* espacio de 10px entre logo y texto si lo hubiera */
     gap: 10px;
+    /* alineacion vertical centrada */
     align-items: center;
 }
 
+/* imagen del logo */
 .header__logo {
+    /* ancho fijo de 90px */
     width: 90px;
+    /* alto fijo de 90px */
     height: 90px;
+    /* ajusta la imagen para que quepa en el contenedor */
     object-fit: contain;
 }
 
+/* navegacion de la cabecera */
 .nav__header {
+    /* usa flexbox */
     display: flex;
+    /* alineacion vertical centrada */
     align-items: center;
 }
 
+/* lista de elementos de la cabecera */
 .header__lista {
+    /* usa flexbox */
     display: flex;
+    /* espacio de 20px entre elementos */
     gap: 20px;
+    /* tamano de fuente 18px */
     font-size: 18px;
+    /* peso de fuente medio */
     font-weight: 500;
+    /* quita los puntos de la lista */
     list-style: none;
 }
 
+/* enlaces dentro de la cabecera */
 .header__links {
+    /* usa flexbox */
     display: flex;
+    /* quita el subrayado */
     text-decoration: none;
+    /* margen derecho de 20px */
     margin-right: 20px;
+    /* color del texto */
     color: var(--color-letra-boton);
+    /* espacio de 10px */
     gap: 10px;
+    /* alineacion vertical centrada */
     align-items: center;
 }
 
+/* estilo para los items de la lista de enlaces */
 .header__lista--link {
+    /* borde derecho separador */
     border-right: solid 2px var(--color-negro);
+    /* relleno derecho */
     padding-right: 20px;
 }
 
+/* barra lateral */
 .sidebar {
+    /* asigna al area sidebar */
     grid-area: sidebar;
+    /* usa flexbox */
     display: flex;
+    /* color de fondo de la barra lateral */
     background-color: var(--color-fondo-sidebar);
+    /* centra horizontalmente */
     justify-content: center;
+    /* centra verticalmente */
     align-items: center;
+    /* tamano de fuente 20px */
     font-size: 20px;
+    /* color del texto */
     color: var(--color-letra)
 }
 
+/* navegacion dentro de la barra lateral */
 .sidebar__nav {
+    /* usa flexbox */
     display: flex;
+    /* orientacion vertical */
     flex-direction: column;
+    /* espacio grande entre botones */
     gap: 70px;
 }
 
+/* boton activo o destacado en la barra lateral */
 .boton__sidebar--nav {
+    /* borde del boton */
     border: solid 2px var(--color-borde-botones);
+    /* color de fondo destacado */
     background-color: var(--color-fondo-boton-vista-admin);
+    /* esquinas redondeadas */
     border-radius: 16px;
 }
 
+/* enlaces de la lista de la barra lateral */
 .sidebar__lista--link {
+    /* usa flexbox */
     display: flex;
+    /* centra el contenido */
     justify-content: center;
+    /* centra verticalmente */
     align-items: center;
+    /* quita el subrayado */
     text-decoration: none;
+    /* color del texto */
     color: var(--color-letra-boton-vista-admin);
+    /* relleno interno */
     padding: 20px 20px;
+    /* ocupa todo el ancho */
     width: 100%;
+    /* texto en negrita */
     font-weight: bold;
 }
 
+/* area principal de contenido */
 .main {
+    /* asigna al area main */
     grid-area: main;
+    /* usa flexbox */
     display: flex;
+    /* orientacion vertical */
     flex-direction: column;
+    /* centra horizontalmente */
     align-items: center;
+    /* borde del area principal */
     border: solid 1px var(--color-marco-main);
+    /* centra verticalmente */
     justify-content: center;
+    /* color de fondo */
     background-color: var(--color-fondo);
+    /* espacio entre elementos */
     gap: 30px;
+    /* relleno interno */
     padding: 20px;
 }
 
+/* titulo principal */
 .titulo__main {
+    /* tamano de fuente grande */
     font-size: 28px;
+    /* color de texto principal */
     color: var(--color-letra-boton-vista-admin);
 }
 
+/* contenedor del grafico */
 .grafico__contenedor {
+    /* usa flexbox */
     display: flex;
+    /* alinea verticalmente al centro */
     align-items: center;
+    /* espacio entre grafico y leyenda */
     gap: 50px;
+    /* color de fondo de la tarjeta */
     background-color: var(--color-fondo-card);
+    /* borde del contenedor */
     border: 2px solid var(--color-gris-oscuro);
+    /* esquinas redondeadas */
     border-radius: 10px;
+    /* relleno interno */
     padding: 30px;
 }
 
+/* grafico de pastel/torta */
 .grafico__pie {
+    /* ancho fijo */
     width: 300px;
+    /* altura fija igual al ancho para hacerlo circular */
     height: 300px;
+    /* lo hace circular */
     border-radius: 50%;
+    /* borde */
     border: 2px solid var(--color-gris-oscuro);
+    /* gradiente conico para simular los segmentos del pastel */
     background: conic-gradient(var(--color-membresia-mensual) 0% 30%,
             var(--color-membresia-trimestral) 30% 50%,
             var(--color-membresia-semestral) 50% 80%,
             var(--color-membresia-anual) 80% 100%);
 }
 
+/* leyenda del grafico de pastel */
 .leyenda__pie {
+    /* usa flexbox */
     display: flex;
+    /* orientacion vertical */
     flex-direction: column;
+    /* espacio entre items de la leyenda */
     gap: 20px;
 }
 
+/* item individual de la leyenda */
 .leyenda__item {
+    /* usa flexbox */
     display: flex;
+    /* alinea verticalmente */
     align-items: center;
+    /* espacio entre color y texto */
     gap: 12px;
 }
 
+/* cuadro de color en la leyenda */
 .leyenda__color {
+    /* ancho */
     width: 24px;
+    /* altura */
     height: 24px;
+    /* esquinas ligeramente redondeadas */
     border-radius: 4px;
+    /* borde fino */
     border: 1px solid var(--color-gris-oscuro);
 }
 
+/* texto de la leyenda */
 .leyenda__texto {
+    /* usa flexbox */
     display: flex;
+    /* orientacion vertical */
     flex-direction: column;
 }
 
+/* nombre del item en la leyenda */
 .leyenda__nombre {
+    /* texto en negrita */
     font-weight: bold;
+    /* tamano de fuente */
     font-size: 16px;
 }
 
+/* porcentaje en la leyenda */
 .leyenda__porcentaje {
+    /* tamano de fuente */
     font-size: 14px;
+    /* color gris medio */
     color: var(--color-gris-medio);
 }
 
+/* colores especificos para la leyenda */
 .leyenda__color--mensual {
+    /* color para membresia mensual */
     background-color: var(--color-membresia-mensual);
 }
 
 .leyenda__color--trimestral {
+    /* color para membresia trimestral */
     background-color: var(--color-membresia-trimestral);
 }
 
 .leyenda__color--semestral {
+    /* color para membresia semestral */
     background-color: var(--color-membresia-semestral);
 }
 
 .leyenda__color--anual {
+    /* color para membresia anual */
     background-color: var(--color-membresia-anual);
 }
 
+/* contenedor para el total de ingresos */
 .total__ingresos {
+    /* tamano de fuente */
     font-size: 20px;
+    /* color de fondo */
     background-color: var(--color-fondo-card);
+    /* relleno interno */
     padding: 15px 30px;
+    /* borde */
     border: 2px solid var(--color-gris-oscuro);
+    /* esquinas redondeadas */
     border-radius: 10px;
 }
 
+/* valor del total */
 .total__valor {
+    /* texto en negrita */
     font-weight: bold;
+    /* color de exito (verde o similar) */
     color: var(--color-letra-exito);
 }

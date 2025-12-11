@@ -1,182 +1,314 @@
+/* importa las variables personalizadas desde custom_properties.css */
 @import url(../components/custom_properties.css);
 
+/* selector universal para resetear margenes y relleno */
 * {
+    /* elimina el margen por defecto */
     margin: 0;
+    /* elimina el relleno por defecto */
     padding: 0;
+    /* incluye el borde y el relleno en el tamano total del elemento */
     box-sizing: border-box;
 }
 
+/* estilo para el cuerpo de la pagina usando grid */
 .body {
+    /* usa grid layout */
     display: grid;
+    /* define dos columnas: una de 1 fraccion y otra de 3 fracciones */
     grid-template-columns: 1fr 3fr;
+    /* define filas: cabecera de 90px y cuerpo de 2 fracciones */
     grid-template-rows: 90px 2fr;
+    /* altura del 100% de la ventana */
     height: 100vh;
+    /* fuente principal */
     font-family: var(--fuente-letra);
+    /* areas del grid: cabecera arriba, sidebar izquierda, main derecha */
     grid-template-areas:
         "header header"
         "sidebar main";
 }
 
+/* estilo para la cabecera del dashboard */
 .header {
+    /* asigna al area header */
     grid-area: header;
+    /* flexbox para distribuir contenido */
     display: flex;
+    /* espacio entre elementos */
     justify-content: space-between;
+    /* alineacion vertical centrada */
     align-items: center;
 }
 
+/* contenedor del logo en la cabecera */
 .logo_container {
+    /* usa flexbox */
     display: flex;
+    /* espacio de 10px entre logo y texto si lo hubiera */
     gap: 10px;
+    /* alineacion vertical centrada */
     align-items: center;
 }
 
+/* imagen del logo */
 .header__logo {
+    /* ancho fijo de 90px */
     width: 90px;
+    /* alto fijo de 90px */
     height: 90px;
+    /* ajusta la imagen para que quepa en el contenedor */
     object-fit: contain;
 }
 
+/* navegacion de la cabecera */
 .nav__header {
+    /* usa flexbox */
     display: flex;
+    /* alineacion vertical centrada */
     align-items: center;
 }
 
+/* lista de elementos de la cabecera */
 .header__lista {
+    /* usa flexbox */
     display: flex;
+    /* espacio de 20px entre elementos */
     gap: 20px;
+    /* tamano de fuente 18px */
     font-size: 18px;
+    /* peso de fuente medio */
     font-weight: 500;
+    /* quita los puntos de la lista */
     list-style: none;
 }
 
+/* enlaces dentro de la cabecera */
 .header__links {
+    /* usa flexbox */
     display: flex;
+    /* quita el subrayado */
     text-decoration: none;
+    /* margen derecho de 20px */
     margin-right: 20px;
+    /* color del texto */
     color: var(--color-letra-boton);
+    /* espacio de 10px */
     gap: 10px;
+    /* alineacion vertical centrada */
     align-items: center;
 }
 
+/* estilo para los items de la lista de enlaces */
 .header__lista--link {
+    /* borde derecho separador */
     border-right: solid 2px var(--color-negro);
+    /* relleno derecho */
     padding-right: 20px;
 }
 
+/* barra lateral */
 .sidebar {
+    /* asigna al area sidebar */
     grid-area: sidebar;
+    /* usa flexbox */
     display: flex;
+    /* color de fondo de la barra lateral */
     background-color: var(--color-fondo-sidebar);
+    /* centra horizontalmente */
     justify-content: center;
+    /* centra verticalmente */
     align-items: center;
+    /* tamano de fuente 20px */
     font-size: 20px;
+    /* color del texto */
     color: var(--color-letra)
 }
 
+/* navegacion dentro de la barra lateral */
 .sidebar__nav {
+    /* usa flexbox */
     display: flex;
+    /* orientacion vertical */
     flex-direction: column;
+    /* espacio grande entre botones */
     gap: 70px;
 }
 
+/* boton activo o destacado en la barra lateral */
 .boton__sidebar--nav {
+    /* borde del boton */
     border: solid 2px var(--color-borde-botones);
+    /* color de fondo destacado */
     background-color: var(--color-fondo-boton-vista-admin);
+    /* esquinas redondeadas */
     border-radius: 16px;
 }
 
+/* enlaces de la lista de la barra lateral */
 .sidebar__lista--link {
+    /* usa flexbox */
     display: flex;
+    /* centra el contenido */
     justify-content: center;
+    /* centra verticalmente */
     align-items: center;
+    /* quita el subrayado */
     text-decoration: none;
+    /* color del texto */
     color: var(--color-letra-boton-vista-admin);
+    /* relleno interno */
     padding: 20px 20px;
+    /* ocupa todo el ancho */
     width: 100%;
+    /* texto en negrita */
     font-weight: bold;
 }
 
+/* area principal de contenido */
 .main {
+    /* asigna al area main */
     grid-area: main;
+    /* usa flexbox */
     display: flex;
+    /* orientacion vertical */
     flex-direction: column;
+    /* centra horizontalmente */
     align-items: center;
+    /* borde del area principal */
     border: solid 1px var(--color-marco-main);
+    /* centra contenido */
     justify-content: center;
+    /* color de fondo */
     background-color: var(--color-fondo);
 }
 
+/* titulo de la pagina */
 .titulo {
+    /* margen inferior */
     margin-bottom: 40px;
 }
 
+/* barra de busqueda */
 .barra__busqueda {
+    /* usa flexbox */
     display: flex;
+    /* ancho completo */
     width: 100%;
+    /* centra horizontalmente */
     justify-content: center;
+    /* centra verticalmente */
     align-items: center;
+    /* espacio entre elementos */
     gap: 12px;
+    /* margen vertical */
     margin: 20px 0;
 }
 
+/* campo de entrada de busqueda */
 .input__barra {
+    /* relleno interno */
     padding: 10px 14px;
+    /* ancho fijo */
     width: 500px;
+    /* borde solido */
     border: 2px solid var(--color-borde-botones);
+    /* bordes redondeados */
     border-radius: 8px;
+    /* tamano de fuente */
     font-size: 16px;
+    /* quita el borde de enfoque por defecto */
     outline: none;
+    /* transicion suave para el borde */
     transition: border-color 0.3s ease;
 }
 
+/* efecto foco en el input */
 .input__barra:focus {
+    /* cambia color del borde */
     border-color: var(--color-fondo-boton-vista-admin);
 }
 
+/* boton de busqueda */
 .boton__barra {
+    /* relleno interno */
     padding: 10px 16px;
+    /* color de fondo */
     background-color: var(--color-fondo-boton-vista-admin);
+    /* altura fija */
     height: 42px;
+    /* color del texto */
     color: var(--color-letra-boton-vista-admin);
+    /* sin borde */
     border: none;
+    /* bordes redondeados */
     border-radius: 8px;
+    /* texto en negrita */
     font-weight: bold;
+    /* cursor de mano */
     cursor: pointer;
+    /* usa flexbox */
     display: flex;
+    /* alinea verticalmente */
     align-items: center;
+    /* espacio entre texto e icono */
     gap: 8px;
+    /* transicion suave para fondo */
     transition: background-color 0.3s ease;
 }
 
+/* efecto hover en el boton */
 .boton__barra:hover {
+    /* cambia color de fondo */
     background-color: var(--color-borde-botones);
+    /* cambia color de texto */
     color: var(--color-blanco);
 }
 
+/* tabla de datos */
 .tabla {
+    /* ancho del 90% */
     width: 90%;
+    /* colapsa bordes de la tabla */
     border-collapse: collapse;
+    /* margen superior */
     margin-top: 20px;
+    /* tamano de fuente */
     font-size: 16px;
+    /* alinea texto al centro */
     text-align: center;
+    /* color de fondo de la tabla */
     background-color: var(--color-fondo-card);
+    /* esquinas redondeadas */
     border-radius: 8px;
+    /* oculta desbordamiento */
     overflow: hidden;
+    /* sombra suave */
     box-shadow: 0 2px 6px var(--color-overlay-borde);
 }
 
+/* cabeceras de la tabla */
 .titulos__tabla th {
+    /* color de fondo del encabezado */
     background-color: var(--color-fondo-boton-vista-admin);
+    /* color del texto */
     color: var(--color-letra-boton-vista-admin);
+    /* relleno interno */
     padding: 12px;
+    /* negrita */
     font-weight: bold;
 }
 
+/* celdas de datos de la tabla */
 .datos__tabla td {
+    /* relleno interno */
     padding: 12px;
+    /* borde inferior */
     border-bottom: 1px solid var(--color-gris-tabla);
 }
 
+/* efecto hover en las filas de datos */
 .datos__tabla:hover {
+    /* cambia color de fondo al pasar el mouse */
     background-color: var(--color-gris-tabla-hover);
 }

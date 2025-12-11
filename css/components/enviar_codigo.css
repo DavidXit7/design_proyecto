@@ -1,66 +1,114 @@
+/* importa las variables personalizadas desde custom_properties.css */
 @import url(../components/custom_properties.css);
 
-*{
+/* selector universal para resetear margenes y relleno */
+* {
+    /* elimina el margen por defecto */
     margin: 0;
+    /* elimina el relleno por defecto */
     padding: 0;
+    /* incluye el borde y el relleno en el tamano total del elemento */
     box-sizing: border-box;
 }
 
-.contenedor{
+/* contenedor principal usa grid */
+.contenedor {
+    /* usa grid layout */
     display: grid;
+    /* altura del 100% de la ventana */
     height: 100vh;
 }
 
-.formulario{
+/* estilo del formulario */
+.formulario {
+    /* usa flexbox */
     display: flex;
+    /* orientacion vertical */
     flex-direction: column;
+    /* centra contenido horizontalmente */
     justify-content: center;
+    /* centra contenido verticalmente */
     align-items: center;
+    /* relleno interno */
     padding: 40px;
+    /* color de fondo */
     background-color: var(--color-fondo);
 }
 
+/* titulo del formulario */
 .formulario__titulo {
+    /* margen inferior */
     margin-bottom: 20px;
+    /* fuente principal */
     font-family: var(--fuente-letra);
 }
 
+/* contenedor del contenido del formulario */
 .formulario__contenido {
+    /* ancho completo */
     width: 100%;
+    /* ancho maximo */
     max-width: 400px;
 }
 
+/* contenedor de campo individual */
 .formulario__campo {
+    /* margen inferior */
     margin-bottom: 15px;
 }
 
+/* etiqueta del campo */
 .formulario__label {
+    /* margen inferior */
     margin-bottom: 10px;
+    /* texto en negrita */
     font-weight: bold;
+    /* bloque para salto de linea */
     display: block;
+    /* fuente principal */
     font-family: var(--fuente-letra);
+    /* tamano de fuente */
     font-size: 18px;
 }
 
-.formulario__input{
+/* campo de entrada */
+.formulario__input {
+    /* ancho completo */
     width: 100%;
+    /* relleno interno */
     padding: 8px;
+    /* borde solido */
     border: 1px solid var(--color-borde-formulario);
+    /* esquinas redondeadas */
     border-radius: 4px;
+    /* altura fija */
     height: 50px;
 }
 
+/* boton del formulario */
 .formulario__boton {
+    /* ancho completo */
     width: 100%;
+    /* relleno interno */
     padding: 10px;
+    /* color de fondo del boton */
     background-color: var(--color-fondo-boton);
+    /* color del texto */
     color: var(--color-letra);
+    /* tamano de fuente */
     font-size: 20px;
+    /* sin borde */
     border: none;
+    /* esquinas redondeadas */
     border-radius: 7px;
+    /* cursor de mano */
     cursor: pointer;
+    /* altura fija */
     height: 50px;
+    /* fuente principal */
     font-family: var(--fuente-letra);
+    /* margen inferior */
     margin-bottom: 10px;
+    /* margen superior */
     margin-top: 10px;
 }

@@ -4,61 +4,93 @@
    Tablet: 768px - 1023px
    ============================================ */
 
+/* importa las variables personalizadas */
 @import url(../components/custom_properties.css);
 
 
-/* Checkbox oculto */
+/* checkbox oculto para controlar el menu */
 .menu-toggle {
+    /* no se muestra en pantalla */
     display: none;
 }
 
-/* Hamburger Menu Button - Hidden by default */
+/* boton de menu hamburguesa - oculto por defecto en escritorio */
 .hamburger {
+    /* oculto por defecto */
     display: none;
+    /* organiza las lineas en columna */
     flex-direction: column;
+    /* centra las lineas horizontalmente */
     justify-content: center;
+    /* centra las lineas verticalmente */
     align-items: center;
+    /* ancho del boton */
     width: 40px;
+    /* alto del boton */
     height: 40px;
+    /* cursor de mano */
     cursor: pointer;
+    /* sin fondo */
     background: none;
+    /* sin borde */
     border: none;
+    /* relleno interno */
     padding: 5px;
+    /* capa superior */
     z-index: 1001;
 }
 
+/* lineas del menu hamburguesa */
 .hamburger__linea {
+    /* ancho de la linea */
     width: 25px;
+    /* alto de la linea */
     height: 3px;
+    /* color de la linea */
     background-color: var(--color-gris-oscuro);
+    /* margen vertical */
     margin: 3px 0;
+    /* transicion suave para la animacion */
     transition: all 0.3s ease;
+    /* bordes redondeados */
     border-radius: 2px;
 }
 
-/* Hamburger Animation when checkbox is checked */
+/* animacion hamburguesa cuando el checkbox esta marcado */
+/* rota la primera linea */
 .menu-toggle:checked~.header .hamburger .hamburger__linea:nth-child(1) {
     transform: rotate(45deg) translate(5px, 5px);
 }
 
+/* oculta la segunda linea */
 .menu-toggle:checked~.header .hamburger .hamburger__linea:nth-child(2) {
     opacity: 0;
 }
 
+/* rota la tercera linea en sentido contrario */
 .menu-toggle:checked~.header .hamburger .hamburger__linea:nth-child(3) {
     transform: rotate(-45deg) translate(7px, -6px);
 }
 
-/* Overlay for sidebar */
+/* capa oscura de fondo para el sidebar */
 .sidebar__overlay {
+    /* oculta por defecto */
     display: none;
+    /* posicion fija en la pantalla */
     position: fixed;
+    /* alineado arriba */
     top: 0;
+    /* alineado izquierda */
     left: 0;
+    /* ancho completo */
     width: 100%;
+    /* alto completo */
     height: 100%;
+    /* color de fondo semitransparente */
     background-color: var(--color-overlay);
+    /* capa superior */
     z-index: 999;
+    /* cursor de mano */
     cursor: pointer;
 }
 
@@ -66,48 +98,58 @@
    TABLET: 768px - 1023px
    ============================================ */
 @media screen and (min-width: 768px) and (max-width: 1023px) {
+
+    /* ajuste del grid para tablets */
     .body {
+        /* reduce el ancho del sidebar a 200px */
         grid-template-columns: 200px 1fr;
     }
 
+    /* ajusta el tamano del logo */
     .header__logo {
         width: 70px;
         height: 70px;
     }
 
+    /* ajusta el tamano de la fuente del titulo */
     .titulo__logo {
         font-size: 20px;
     }
 
+    /* ajusta la lista del header */
     .header__lista {
         font-size: 14px;
         gap: 10px;
     }
 
+    /* ajusta el padding de los links del header */
     .header__lista--link {
         padding-right: 10px;
     }
 
+    /* ajusta el espacio en la navegacion del sidebar */
     .sidebar__nav {
         gap: 40px;
     }
 
+    /* ajusta la fuente de los botones del sidebar */
     .boton__sidebar--nav {
         font-size: 14px;
     }
 
+    /* ajusta los links de la lista del sidebar */
     .sidebar__lista--link {
         padding: 15px 10px;
         font-size: 14px;
     }
 
-    /* ===== MAIN CONTENT TABLET ===== */
+    /* ===== CONTENIDO PRINCIPAL TABLET ===== */
     .main {
         font-size: 18px;
         padding: 15px;
     }
 
-    /* Formularios */
+    /* ajustes para formularios en tablet */
     .formulario {
         padding: 20px;
         margin: 20px;
@@ -115,25 +157,29 @@
         max-width: 500px;
     }
 
+    /* input ocupa todo el ancho */
     .formulario__input {
         width: 100%;
     }
 
+    /* titulo del formulario centrado */
     .formulario__titulo {
         font-size: 20px;
         text-align: center;
     }
 
+    /* textarea ocupa todo el ancho */
     .formulario__textarea {
         width: 100%;
     }
 
-    /* Estadísticas Cards */
+    /* tarjetas de estadisticas */
     .estadisticas__contenedor {
         gap: 20px;
         padding: 10px;
     }
 
+    /* tarjeta individual */
     .estadistica__card {
         width: 100%;
         max-width: 350px;
@@ -141,56 +187,65 @@
         padding: 25px;
     }
 
-    /* Gráficos */
+    /* contenedores de graficos */
     .grafico__contenedor {
         width: 90%;
         padding: 15px;
     }
 
+    /* contenedor de barras */
     .barras__contenedor {
         padding: 0 10px;
     }
 
+    /* ancho de barra individual */
     .barra {
         width: 50px;
     }
 
+    /* grafico de pastel */
     .grafico__pie {
         width: 200px;
         height: 200px;
     }
 
+    /* leyenda del grafico de pastel */
     .leyenda__pie {
         gap: 15px;
     }
 
-    /* Buscadores */
+    /* ajustes para buscadores */
     .barra__busqueda {
         flex-direction: column;
         width: 90%;
     }
 
+    /* input de busqueda */
     .input__barra {
         width: 100%;
     }
 
+    /* contenedor del buscador */
     .formulario__buscador {
         width: 90%;
     }
 
+    /* fila del buscador */
     .buscador__fila {
         flex-direction: column;
     }
 
+    /* boton limpiar */
     .boton__limpiar {
         width: 100%;
     }
 
+    /* boton buscar */
     .boton__buscar {
         width: 100%;
     }
 
-    /* Icono agregar */
+    /* icono de agregar */
     .icono__agregar {
         font-size: 80px;
     }
@@ -201,12 +256,12 @@
    ============================================ */
 @media screen and (max-width: 767px) {
 
-    /* Show hamburger button */
+    /* muestra el boton hamburguesa */
     .hamburger {
         display: flex;
     }
 
-    /* Change grid layout */
+    /* cambia el layout a una sola columna */
     .body {
         grid-template-columns: 1fr;
         grid-template-rows: 70px 1fr;
@@ -215,80 +270,98 @@
             "main";
     }
 
-    /* Header adjustments */
+    /* ajustes del header */
     .header {
         padding: 0 10px;
         position: relative;
     }
 
+    /* logo mas pequeno */
     .header__logo {
         width: 50px;
         height: 50px;
     }
 
+    /* titulo mas pequeno */
     .titulo__logo {
         font-size: 16px;
     }
 
+    /* navegacion header */
     .nav__header {
         gap: 10px;
     }
 
+    /* lista header */
     .header__lista {
         font-size: 12px;
         gap: 8px;
     }
 
+    /* oculta separadores */
     .header__lista--link {
         display: none;
     }
 
+    /* links header */
     .header__links {
         margin-right: 10px;
         font-size: 12px;
     }
 
+    /* iconos header */
     .header__links i {
         font-size: 16px;
     }
 
-    /* Sidebar as slide-out menu */
+    /* sidebar como menu deslizable */
     .sidebar {
+        /* posicion fija */
         position: fixed;
+        /* arriba */
         top: 0;
+        /* oculto a la izquierda */
         left: -280px;
+        /* ancho del menu */
         width: 280px;
+        /* altura completa */
         height: 100vh;
+        /* capa superior */
         z-index: 1000;
+        /* animacion de entrada */
         transition: left 0.3s ease;
+        /* espacio superior */
         padding-top: 80px;
     }
 
-    /* Show sidebar when checkbox is checked */
+    /* muestra sidebar si checkbox esta marcado */
     .menu-toggle:checked~.sidebar {
         left: 0;
     }
 
-    /* Show overlay when checkbox is checked */
+    /* muestra overlay si checkbox esta marcado */
     .menu-toggle:checked~.sidebar__overlay {
         display: block;
     }
 
+    /* navegacion sidebar */
     .sidebar__nav {
         gap: 30px;
         padding: 20px;
     }
 
+    /* boton sidebar ancho completo */
     .boton__sidebar--nav {
         width: 100%;
     }
 
+    /* links sidebar */
     .sidebar__lista--link {
         padding: 15px;
         font-size: 16px;
     }
 
-    /* ===== MAIN CONTENT MOBILE ===== */
+    /* ===== CONTENIDO PRINCIPAL MOBILE ===== */
     .main {
         font-size: 16px;
         padding: 20px 15px;
@@ -296,7 +369,7 @@
         overflow-y: auto;
     }
 
-    /* Mensajes de bienvenida */
+    /* mensajes de bienvenida */
     .mensaje__bienvenida,
     .mensaje__fecha,
     .frase__motivacional {
@@ -306,6 +379,7 @@
         line-height: 1.4;
     }
 
+    /* frase motivacional ajuste */
     .frase__motivacional {
         font-size: 14px;
         padding: 0 10px;
@@ -319,6 +393,7 @@
         padding: 0 10px;
     }
 
+    /* contenedor formulario */
     .formulario {
         display: flex;
         flex-direction: column;
@@ -327,21 +402,25 @@
         margin: 15px auto;
     }
 
+    /* etiquetas formulario */
     .formulario__label {
         font-size: 16px;
     }
 
+    /* inputs formulario */
     .formulario__input {
         width: 100%;
         height: 40px;
         font-size: 14px;
     }
 
+    /* textareas */
     .formulario__textarea {
         width: 100%;
         height: 100px;
     }
 
+    /* botones formulario */
     .formulario__boton {
         width: 100%;
         height: 45px;
@@ -358,6 +437,7 @@
         padding: 0 15px;
     }
 
+    /* tarjeta estadistica */
     .estadistica__card {
         width: 100%;
         height: auto;
@@ -365,11 +445,13 @@
         gap: 15px;
     }
 
+    /* titulo tarjeta */
     .estadistica__card h3 {
         font-size: 16px;
         text-align: center;
     }
 
+    /* boton estadistica */
     .estadistica__boton {
         width: 100%;
         height: 40px;
@@ -382,6 +464,7 @@
         margin-bottom: 15px;
     }
 
+    /* contenedor grafico */
     .grafico__contenedor {
         width: 95%;
         padding: 15px 10px;
@@ -389,28 +472,34 @@
         align-items: center;
     }
 
+    /* oculta eje y */
     .eje-y {
         display: none;
     }
 
+    /* contenedor barras */
     .barras__contenedor {
         height: 200px;
         padding: 0 5px;
         width: 100%;
     }
 
+    /* barras */
     .barra {
         width: 45px;
     }
 
+    /* etiqueta barra */
     .barra__label {
         font-size: 10px;
     }
 
+    /* valor barra */
     .barra__valor {
         font-size: 10px;
     }
 
+    /* leyenda */
     .leyenda {
         gap: 10px;
         font-size: 12px;
@@ -418,6 +507,7 @@
         justify-content: center;
     }
 
+    /* color leyenda */
     .leyenda__color {
         width: 15px;
         height: 15px;
@@ -430,23 +520,28 @@
         margin-bottom: 20px;
     }
 
+    /* leyenda pie */
     .leyenda__pie {
         gap: 12px;
         width: 100%;
     }
 
+    /* item leyenda */
     .leyenda__item {
         gap: 8px;
     }
 
+    /* nombre leyenda */
     .leyenda__nombre {
         font-size: 14px;
     }
 
+    /* porcentaje leyenda */
     .leyenda__porcentaje {
         font-size: 12px;
     }
 
+    /* total ingresos */
     .total__ingresos {
         font-size: 14px;
         padding: 12px 20px;
@@ -458,29 +553,35 @@
         width: 100%;
     }
 
+    /* svg linea */
     .linea__svg {
         height: 150px;
     }
 
+    /* eje x */
     .eje-x {
         font-size: 11px;
     }
 
+    /* span eje x */
     .eje-x span {
         font-size: 10px;
     }
 
+    /* resumen ventas */
     .resumen__ventas {
         flex-direction: column;
         gap: 15px;
         width: 100%;
     }
 
+    /* item resumen */
     .resumen__item {
         padding: 12px 20px;
         width: 100%;
     }
 
+    /* valor resumen */
     .resumen__valor {
         font-size: 20px;
     }
@@ -492,33 +593,40 @@
         gap: 10px;
     }
 
+    /* input barra */
     .input__barra {
         width: 100%;
         font-size: 14px;
     }
 
+    /* boton barra */
     .boton__barra {
         width: 100%;
         justify-content: center;
     }
 
+    /* formulario buscador */
     .formulario__buscador {
         width: 95%;
     }
 
+    /* fila buscador */
     .buscador__fila {
         flex-direction: column;
         gap: 10px;
     }
 
+    /* input dentro de barra busqueda */
     .barra__busqueda input {
         width: 100%;
     }
 
+    /* boton limpiar */
     .boton__limpiar {
         width: 100%;
     }
 
+    /* boton buscar */
     .boton__buscar {
         width: 100%;
     }
@@ -528,6 +636,7 @@
         font-size: 70px;
     }
 
+    /* texto bajo icono */
     .icono__agregar+p {
         font-size: 14px;
         text-align: center;
@@ -550,24 +659,29 @@
         margin: 10px auto;
     }
 
+    /* titulo card */
     .titulo__card {
         font-size: 16px;
         text-align: center;
     }
 
+    /* header card */
     .card__header {
         padding: 10px;
     }
 
+    /* descripcion card */
     .card__descripcion {
         padding: 15px;
         font-size: 14px;
     }
 
+    /* parrafos descripcion */
     .card__descripcion p {
         margin-bottom: 8px;
     }
 
+    /* iconos card */
     .card__icons {
         display: flex;
         justify-content: center;
@@ -575,10 +689,12 @@
         padding: 10px;
     }
 
+    /* link botones card */
     .card__button--link {
         font-size: 18px;
     }
 
+    /* imagen card */
     .card__image {
         max-width: 80px;
     }
@@ -591,15 +707,18 @@
         display: block;
     }
 
+    /* celdas tabla */
     .tabla th,
     .tabla td {
         padding: 8px 5px;
     }
 
+    /* titulos tabla */
     .titulos__tabla th {
         font-size: 11px;
     }
 
+    /* datos tabla */
     .datos__tabla td {
         font-size: 11px;
     }
@@ -611,33 +730,39 @@
         padding: 15px;
     }
 
+    /* ventana modal */
     .ventana {
         width: 95%;
         max-width: 350px;
         margin: 0 auto;
     }
 
+    /* mensaje ventana */
     .mensaje__ventana {
         padding: 20px 15px;
         font-size: 14px;
     }
 
+    /* titulo ventana */
     .titulo__ventana {
         font-size: 18px;
         margin-bottom: 15px;
     }
 
+    /* parrafo mensaje */
     .mensaje__ventana p {
         margin-bottom: 10px;
         font-size: 14px;
     }
 
+    /* boton cerrar */
     .cerrar {
         display: inline-block;
         margin-top: 15px;
         padding: 10px 20px;
     }
 
+    /* opciones modal */
     .opciones {
         display: flex;
         gap: 15px;
@@ -645,6 +770,7 @@
         margin-top: 15px;
     }
 
+    /* cerrar dentro de opciones */
     .opciones .cerrar {
         margin-top: 0;
     }

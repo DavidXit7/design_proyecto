@@ -1,202 +1,345 @@
+/* importa las variables personalizadas desde custom_properties.css */
 @import url(../components/custom_properties.css);
 
+/* selector universal para resetear margenes y relleno */
 * {
+    /* elimina el margen por defecto */
     margin: 0;
+    /* elimina el relleno por defecto */
     padding: 0;
+    /* incluye el borde y el relleno en el tamano total del elemento */
     box-sizing: border-box;
 }
 
+/* estilo para el cuerpo de la pagina usando grid */
 .body {
+    /* usa grid layout */
     display: grid;
+    /* define dos columnas: una de 1 fraccion y otra de 3 fracciones */
     grid-template-columns: 1fr 3fr;
+    /* define filas: cabecera de 90px y cuerpo de 2 fracciones */
     grid-template-rows: 90px 2fr;
+    /* altura del 100% de la ventana */
     height: 100vh;
+    /* fuente principal */
     font-family: var(--fuente-letra);
+    /* areas del grid: cabecera arriba, sidebar izquierda, main derecha */
     grid-template-areas:
         "header header"
         "sidebar main";
 }
 
+/* estilo para la cabecera del dashboard */
 .header {
+    /* asigna al area header */
     grid-area: header;
+    /* flexbox para distribuir contenido */
     display: flex;
+    /* espacio entre elementos */
     justify-content: space-between;
+    /* alineacion vertical centrada */
     align-items: center;
 }
 
+/* contenedor del logo en la cabecera */
 .logo_container {
+    /* usa flexbox */
     display: flex;
+    /* espacio de 10px entre logo y texto si lo hubiera */
     gap: 10px;
+    /* alineacion vertical centrada */
     align-items: center;
 }
 
+/* imagen del logo */
 .header__logo {
+    /* ancho fijo de 90px */
     width: 90px;
+    /* alto fijo de 90px */
     height: 90px;
+    /* ajusta la imagen para que quepa en el contenedor */
     object-fit: contain;
 }
 
+/* navegacion de la cabecera */
 .nav__header {
+    /* usa flexbox */
     display: flex;
+    /* alineacion vertical centrada */
     align-items: center;
 }
 
+/* lista de elementos de la cabecera */
 .header__lista {
+    /* usa flexbox */
     display: flex;
+    /* espacio de 20px entre elementos */
     gap: 20px;
+    /* tamano de fuente 18px */
     font-size: 18px;
+    /* peso de fuente medio */
     font-weight: 500;
+    /* quita los puntos de la lista */
     list-style: none;
 }
 
+/* enlaces dentro de la cabecera */
 .header__links {
+    /* usa flexbox */
     display: flex;
+    /* quita el subrayado */
     text-decoration: none;
+    /* margen derecho de 20px */
     margin-right: 20px;
+    /* color del texto */
     color: var(--color-letra-boton);
+    /* espacio de 10px */
     gap: 10px;
+    /* alineacion vertical centrada */
     align-items: center;
 }
 
+/* estilo para los items de la lista de enlaces */
 .header__lista--link {
+    /* borde derecho separador */
     border-right: solid 2px var(--color-negro);
+    /* relleno derecho */
     padding-right: 20px;
 }
 
+/* barra lateral */
 .sidebar {
+    /* asigna al area sidebar */
     grid-area: sidebar;
+    /* usa flexbox */
     display: flex;
+    /* color de fondo de la barra lateral */
     background-color: var(--color-fondo-sidebar);
+    /* centra horizontalmente */
     justify-content: center;
+    /* centra verticalmente */
     align-items: center;
+    /* tamano de fuente 20px */
     font-size: 20px;
+    /* color del texto */
     color: var(--color-letra)
 }
 
+/* navegacion dentro de la barra lateral */
 .sidebar__nav {
+    /* usa flexbox */
     display: flex;
+    /* orientacion vertical */
     flex-direction: column;
+    /* espacio grande entre botones */
     gap: 70px;
 }
 
+/* boton activo o destacado en la barra lateral */
 .boton__sidebar--nav {
+    /* borde del boton */
     border: solid 2px var(--color-borde-botones);
+    /* color de fondo destacado */
     background-color: var(--color-fondo-boton-vista-admin);
+    /* esquinas redondeadas */
     border-radius: 16px;
 }
 
+/* enlaces de la lista de la barra lateral */
 .sidebar__lista--link {
+    /* usa flexbox */
     display: flex;
+    /* centra el contenido */
     justify-content: center;
+    /* centra verticalmente */
     align-items: center;
+    /* quita el subrayado */
     text-decoration: none;
+    /* color del texto */
     color: var(--color-letra-boton-vista-admin);
+    /* relleno interno */
     padding: 20px 20px;
+    /* ocupa todo el ancho */
     width: 100%;
+    /* texto en negrita */
     font-weight: bold;
 }
 
+/* area principal de contenido */
 .main {
+    /* asigna al area main */
     grid-area: main;
+    /* usa flexbox */
     display: flex;
+    /* orientacion vertical */
     flex-direction: column;
+    /* borde del area principal */
     border: solid 1px var(--color-negro);
+    /* color de fondo */
     background-color: var(--color-fondo);
 }
 
+/* contenedor del titulo principal */
 .titulo__main {
+    /* usa flexbox */
     display: flex;
+    /* centra horizontalmente */
     justify-content: center;
+    /* margen superior */
     margin-top: 20px;
-
 }
 
+/* titulo de la tarjeta */
 .titulo__card {
+    /* centra el texto */
     text-align: center;
 }
 
+/* tarjeta de informacion del recepcionista */
 .card__recepcionista {
+    /* usa flexbox */
     display: flex;
+    /* orientacion vertical */
     flex-direction: column;
+    /* distribuye contenido */
     justify-content: space-between;
+    /* borde */
     border: solid 2px var(--color-borde-card);
+    /* color de fondo */
     background-color: var(--color-fondo-card);
+    /* esquinas redondeadas */
     border-radius: 20px;
+    /* margen externo */
     margin: 20px;
+    /* relleno interno */
     padding: 15px;
+    /* altura fija */
     height: 240px;
+    /* ancho fijo */
     width: 500px;
+    /* espacio entre elementos */
     gap: 10px;
 }
 
+/* descripcion dentro de la tarjeta */
 .card__descripcion {
+    /* usa flexbox */
     display: flex;
+    /* orientacion vertical */
     flex-direction: column;
+    /* espacio entre lineas */
     gap: 14px;
 }
 
+/* contenedor de iconos */
 .card__icons {
+    /* usa flexbox */
     display: flex;
+    /* alinea a la derecha */
     justify-content: flex-end;
+    /* espacio entre iconos */
     gap: 10px;
 }
 
+/* enlaces dentro de la tarjeta */
 .card__button--link {
+    /* color del texto */
     color: var(--color-letra-boton-vista-admin);
+    /* tamano de fuente */
     font-size: 20px;
 }
 
 
+/* contenedor de la ventana modal */
 .contenedor {
+    /* posicion absoluta */
     position: absolute;
+    /* usa flexbox */
     display: flex;
+    /* centra verticalmente */
     align-items: center;
+    /* centra horizontalmente */
     justify-content: center;
+    /* altura ajustada */
     height: 83vh;
+    /* ancho ajustado */
     width: 70vw;
-    ;
 }
 
+/* titulo de la ventana */
 .titulo__ventana {
+    /* tamano de fuente grande */
     font-size: 32px;
 }
 
+/* ventana modal */
 .ventana {
+    /* borde */
     border: solid 2px var(--color-borde-botones);
+    /* altura fija */
     height: 432px;
+    /* ancho fijo */
     width: 535px;
+    /* esquinas redondeadas */
     border-radius: 20px;
+    /* color de fondo */
     background-color: var(--color-fondo-ventana);
 }
 
+/* contenido de la ventana */
 .mensaje__ventana {
+    /* usa flexbox */
     display: flex;
+    /* centra horizontalmente */
     justify-content: center;
+    /* orientacion vertical */
     flex-direction: column;
+    /* centra verticalmente */
     align-items: center;
+    /* tamano de fuente */
     font-size: 22px;
+    /* margen superior */
     margin-top: 40px;
+    /* espacio entre elementos */
     gap: 20px;
 }
 
+/* boton cerrar */
 .cerrar {
+    /* usa flexbox */
     display: flex;
+    /* centra verticalmente */
     align-items: center;
+    /* centra horizontalmente */
     justify-content: center;
+    /* borde */
     border: solid 1px var(--color-borde-botones);
+    /* quita subrayado */
     text-decoration: none;
+    /* color de texto */
     color: var(--color-letra-boton);
+    /* esquinas redondeadas */
     border-radius: 10px;
+    /* altura boton */
     height: 50px;
+    /* ancho boton */
     width: 100px;
+    /* margen */
     margin: 20px;
+    /* color de texto blanco */
     color: var(--color-letra);
+    /* fondo negro */
     background-color: var(--color-negro);
+    /* texto en negrita */
     font-weight: bold;
+    /* tamano de fuente */
     font-size: 20px;
 }
 
+/* efecto hover en cerrar */
 .cerrar:hover {
+    /* fondo transparente */
     background-color: var(--color-fondo);
+    /* texto color boton */
     color: var(--color-letra-boton-vista-admin);
 }

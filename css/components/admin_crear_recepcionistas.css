@@ -1,117 +1,200 @@
+/* importa las variables personalizadas desde custom_properties.css */
 @import url(../components/custom_properties.css);
 
+/* selector universal para resetear margenes y relleno */
 * {
+    /* elimina el margen por defecto */
     margin: 0;
+    /* elimina el relleno por defecto */
     padding: 0;
+    /* incluye el borde y el relleno en el tamano total del elemento */
     box-sizing: border-box;
 }
 
+/* estilo para el cuerpo de la pagina usando grid */
 .body {
+    /* usa grid layout */
     display: grid;
+    /* define dos columnas: una de 1 fraccion y otra de 3 fracciones */
     grid-template-columns: 1fr 3fr;
+    /* define filas: cabecera de 90px y cuerpo de 2 fracciones */
     grid-template-rows: 90px 2fr;
+    /* altura del 100% de la ventana */
     height: 100vh;
+    /* fuente principal */
     font-family: var(--fuente-letra);
+    /* areas del grid: cabecera arriba, sidebar izquierda, main derecha */
     grid-template-areas:
         "header header"
         "sidebar main";
 }
 
+/* estilo para la cabecera del dashboard */
 .header {
+    /* asigna al area header */
     grid-area: header;
+    /* flexbox para distribuir contenido */
     display: flex;
+    /* espacio entre elementos */
     justify-content: space-between;
+    /* alineacion vertical centrada */
     align-items: center;
 }
 
+/* contenedor del logo en la cabecera */
 .logo_container {
+    /* usa flexbox */
     display: flex;
+    /* espacio de 10px entre logo y texto si lo hubiera */
     gap: 10px;
+    /* alineacion vertical centrada */
     align-items: center;
 }
 
+/* imagen del logo */
 .header__logo {
+    /* ancho fijo de 90px */
     width: 90px;
+    /* alto fijo de 90px */
     height: 90px;
+    /* ajusta la imagen para que quepa en el contenedor */
     object-fit: contain;
 }
 
+/* navegacion de la cabecera */
 .nav__header {
+    /* usa flexbox */
     display: flex;
+    /* alineacion vertical centrada */
     align-items: center;
 }
 
+/* lista de elementos de la cabecera */
 .header__lista {
+    /* usa flexbox */
     display: flex;
+    /* espacio de 20px entre elementos */
     gap: 20px;
+    /* tamano de fuente 18px */
     font-size: 18px;
+    /* peso de fuente medio */
     font-weight: 500;
+    /* quita los puntos de la lista */
     list-style: none;
 }
 
+/* enlaces dentro de la cabecera */
 .header__links {
+    /* usa flexbox */
     display: flex;
+    /* quita el subrayado */
     text-decoration: none;
+    /* margen derecho de 20px */
     margin-right: 20px;
+    /* color del texto */
     color: var(--color-letra-boton);
+    /* espacio de 10px */
     gap: 10px;
+    /* alineacion vertical centrada */
     align-items: center;
 }
 
+/* estilo para los items de la lista de enlaces */
 .header__lista--link {
+    /* borde derecho separador */
     border-right: solid 2px var(--color-negro);
+    /* relleno derecho */
     padding-right: 20px;
 }
 
+/* barra lateral */
 .sidebar {
+    /* asigna al area sidebar */
     grid-area: sidebar;
+    /* usa flexbox */
     display: flex;
+    /* color de fondo de la barra lateral */
     background-color: var(--color-fondo-sidebar);
+    /* centra horizontalmente */
     justify-content: center;
+    /* centra verticalmente */
     align-items: center;
+    /* tamano de fuente 20px */
     font-size: 20px;
+    /* color del texto */
     color: var(--color-letra)
 }
 
+/* navegacion dentro de la barra lateral */
 .sidebar__nav {
+    /* usa flexbox */
     display: flex;
+    /* orientacion vertical */
     flex-direction: column;
+    /* espacio grande entre botones */
     gap: 70px;
 }
 
+/* boton activo o destacado en la barra lateral */
 .boton__sidebar--nav {
+    /* borde del boton */
     border: solid 2px var(--color-borde-botones);
+    /* color de fondo destacado */
     background-color: var(--color-fondo-boton-vista-admin);
+    /* esquinas redondeadas */
     border-radius: 16px;
 }
 
+/* enlaces de la lista de la barra lateral */
 .sidebar__lista--link {
+    /* usa flexbox */
     display: flex;
+    /* centra el contenido */
     justify-content: center;
+    /* centra verticalmente */
     align-items: center;
+    /* quita el subrayado */
     text-decoration: none;
+    /* color del texto */
     color: var(--color-letra-boton-vista-admin);
+    /* relleno interno */
     padding: 20px 20px;
+    /* ocupa todo el ancho */
     width: 100%;
+    /* texto en negrita */
     font-weight: bold;
 }
 
+/* area principal de contenido */
 .main {
+    /* asigna al area main */
     grid-area: main;
+    /* usa flexbox */
     display: flex;
+    /* orientacion vertical */
     flex-direction: column;
+    /* altura de linea para centrar */
     line-height: 100px;
+    /* centra horizontalmente */
     justify-content: center;
+    /* centra verticalmente */
     align-items: center;
+    /* tamano de fuente */
     font-size: 25px;
+    /* borde del area principal */
     border: solid 1px var(--color-marco-main);
+    /* color de fondo */
     background-color: var(--color-fondo);
 }
 
+/* icono grande de agregar */
 .fa-solid {
+    /* tamano de fuente muy grande */
     font-size: 90px;
 }
 
+/* color especifico para el icono de agregar */
 .icono__agregar {
+    /* color del icono */
     color: var(--color-fondo-boton);
 }

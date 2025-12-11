@@ -1,51 +1,87 @@
+/* importa la fuente poppins de google fonts */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
+/* define las variables globales del sistema */
 :root {
-    /* ===== TIPOGRAFIA ===== */
+    /* TIPOGRAFIA */
+    /* define la fuente principal como poppins sin serifa */
     --fuente-letra: "Poppins", sans-serif;
 
-    /* ===== COLORES BASE ===== */
+    /* COLORES BASE */
+    /* color negro puro */
     --color-negro: #000;
+    /* color blanco puro */
     --color-blanco: #fff;
+    /* variante de gris oscuro */
     --color-gris-oscuro: #333;
+    /* variante de gris medio */
     --color-gris-medio: #666;
+    /* variante de gris claro */
     --color-gris-claro: #e0e0e0;
+    /* color de fondo grisaceo */
     --color-gris-fondo: #f0f0f0;
+    /* color para bordes o fondos de tablas */
     --color-gris-tabla: #ddd;
+    /* color para cuando pasas el mouse sobre la tabla */
     --color-gris-tabla-hover: #f2f2f2;
 
-    /* ===== COLORES DE FONDO ===== */
+    /* COLORES DE FONDO */
+    /* color de fondo principal de la pagina */
     --color-fondo: rgb(240, 248, 255);
+    /* color de fondo de la barra lateral */
     --color-fondo-sidebar: #2F3E46;
+    /* color de fondo estandar para botones */
     --color-fondo-boton: #000;
+    /* color de fondo para botones en vista admin */
     --color-fondo-boton-vista-admin: #C6F1AB;
+    /* color de fondo para botones de evento */
     --color-fondo-boton-evento: rgb(139, 170, 255);
+    /* color al pasar el mouse sobre el boton limpiar */
     --color-fondo-boton-limpiar-hover: #b96dff;
+    /* color de fondo para botones de eliminar */
     --color-fondo-boton-eliminar: #e74c3c;
+    /* color al pasar el mouse sobre el boton eliminar */
     --color-fondo-boton-eliminar-hover: #c0392b;
+    /* color de fondo para las opciones de rol */
     --color-fondo-option-rol: #f0f0f0;
+    /* color de fondo para formularios */
     --color-fondo-formulario: #fff;
+    /* color de fondo para tarjetas */
     --color-fondo-card: #fff;
+    /* color de fondo para ventanas modales */
     --color-fondo-ventana: #f0fdf4;
 
-    /* ===== COLORES DE TEXTO ===== */
+    /* COLORES DE TEXTO */
+    /* color de texto general */
     --color-letra: #fff;
+    /* color de texto para botones en vista admin */
     --color-letra-boton-vista-admin: #000;
+    /* color de texto para mensajes de exito */
     --color-letra-exito: #2e7d32;
 
-    /* ===== COLORES DE BORDES ===== */
+    /* COLORES DE BORDES */
+    /* color de borde para formularios */
     --color-borde-formulario: #000;
+    /* color de borde para botones */
     --color-borde-botones: #000;
+    /* color del marco principal */
     --color-marco-main: #000;
+    /* color de borde para tarjetas */
     --color-borde-card: #000;
 
-    /* ===== COLORES MEMBRESIAS (GRAFICOS) ===== */
+    /* COLORES MEMBRESIAS (GRAFICOS) */
+    /* color para membresia mensual */
     --color-membresia-mensual: #ffda60;
+    /* color para membresia trimestral */
     --color-membresia-trimestral: #3ec2ff;
+    /* color para membresia semestral */
     --color-membresia-semestral: #cb72ff;
+    /* color para membresia anual */
     --color-membresia-anual: #68ffd2;
 
-    /* ===== COLORES OVERLAY ===== */
+    /* COLORES OVERLAY */
+    /* color de capa superpuesta con transparencia */
     --color-overlay: rgba(0, 0, 0, 0.5);
+    /* color de borde con transparencia */
     --color-overlay-borde: rgba(0, 0, 0, 0.1);
 }

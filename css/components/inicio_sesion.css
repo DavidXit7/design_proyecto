@@ -1,98 +1,168 @@
+/* importa las variables personalizadas desde custom_properties.css */
 @import url(../components/custom_properties.css);
 
-*{
+/* selector universal para resetear margenes y relleno */
+* {
+    /* elimina el margen por defecto */
     margin: 0;
+    /* elimina el relleno por defecto */
     padding: 0;
+    /* incluye el borde y el relleno en el tamano total del elemento */
     box-sizing: border-box;
 }
 
+/* estilo para el contenedor principal de la pagina de inicio de sesion */
 .contenedor {
+    /* organiza los elementos en columna */
     flex-direction: column;
+    /* espacio de 35px entre elementos */
     gap: 35px;
+    /* usa flexbox para la distribucion */
     display: flex;
+    /* ocupa el 100% de la altura de la ventana */
     height: 100vh;
+    /* centra el contenido horizontalmente */
     justify-content: center;
+    /* centra el contenido verticalmente */
     align-items: center;
 }
 
-.logo{
+/* contenedor para el logo */
+.logo {
+    /* usa flexbox */
     display: flex;
+    /* organiza los elementos en columna */
     flex-direction: column;
+    /* altura fija de 280px */
     height: 280px;
+    /* centra los elementos horizontalmente */
     align-items: center;
 }
 
-.imagen__logo{
+/* estilo para la imagen del logo */
+.imagen__logo {
+    /* ancho fijo de 250px */
     width: 250px;
+    /* alto fijo de 250px */
     height: 250px;
+    /* centra los elementos (aunque al ser imagen unica quizas no afecte mucho) */
     align-items: center;
 }
 
-.titulo__logo{
+/* estilo para el titulo del logo */
+.titulo__logo {
+    /* centra el texto horizontalmente */
     align-items: center;
+    /* usa la fuente personalizada definida en variables */
     font-family: var(--fuente-letra);
 }
 
+/* estilo para el formulario de inicio de sesion */
 .formulario {
+    /* usa flexbox */
     display: flex;
+    /* organiza los campos en columna */
     flex-direction: column;
+    /* centra el contenido verticalmente */
     justify-content: center;
+    /* centra el contenido horizontalmente */
     align-items: center;
+    /* relleno interno de 40px */
     padding: 40px;
 }
 
+/* contenedor del contenido del formulario */
 .formulario__contenido {
+    /* ocupa el 100% del ancho disponible */
     width: 100%;
 }
 
+/* estilo para cada campo del formulario */
 .formulario__campo {
+    /* margen inferior de 15px */
     margin-bottom: 15px;
+    /* ancho fijo de 400px */
     width: 400px;
 }
 
+/* estilo para las etiquetas de los campos */
 .formulario__label {
+    /* margen inferior de 10px */
     margin-bottom: 10px;
+    /* texto en negrita */
     font-weight: bold;
+    /* se comporta como bloque para ocupar su propia linea */
     display: block;
+    /* usa la fuente personalizada */
     font-family: var(--fuente-letra);
+    /* tamano de fuente de 18px */
     font-size: 18px;
 }
 
-.formulario__input{
+/* estilo para los inputs del formulario */
+.formulario__input {
+    /* ocupa el 100% del ancho del contenedor padre */
     width: 100%;
+    /* relleno interno de 16px */
     padding: 16px;
+    /* borde solido de 1px usando variable de color */
     border: 1px solid var(--color-borde-formulario);
+    /* esquinas redondeadas de 10px */
     border-radius: 10px;
+    /* altura de 60px */
     height: 60px;
 }
 
+/* estilo para el boton del formulario */
 .formulario__boton {
+    /* ocupa el 100% del ancho */
     width: 100%;
+    /* relleno interno de 10px */
     padding: 10px;
+    /* color de fondo usando variable */
     background-color: var(--color-fondo-boton);
+    /* color de texto blanco usando variable */
     color: var(--color-letra);
+    /* tamano de fuente de 20px */
     font-size: 20px;
+    /* sin borde */
     border: none;
+    /* esquinas redondeadas de 7px */
     border-radius: 7px;
+    /* cambia el cursor a mano al pasar por encima */
     cursor: pointer;
+    /* altura de 50px */
     height: 50px;
+    /* usa la fuente personalizada */
     font-family: var(--fuente-letra);
+    /* margen superior de 10px */
     margin-top: 10px;
 }
 
-.formulario__boton:hover{
+/* estilo para cuando se pasa el mouse sobre el boton */
+.formulario__boton:hover {
+    /* cambia el color de fondo */
     background-color: var(--color-fondo-boton-vista-admin);
+    /* cambia el color del texto */
     color: var(--color-letra-boton-vista-admin);
 }
 
-.olvido__contraseña{
+/* estilo para el enlace de olvido contrasena */
+.olvido__contraseña {
+    /* usa flexbox */
     display: flex;
+    /* alinea el contenido a la derecha */
     justify-content: flex-end;
+    /* usa la fuente personalizada */
     font-family: var(--fuente-letra);
+    /* relleno inferior de 16px */
     padding-bottom: 16px;
 }
 
-.olvido__contraseña--link{
+/* estilo especifico para el link de olvido contrasena */
+.olvido__contraseña--link {
+    /* quita el subrayado del enlace */
     text-decoration: none;
+    /* color del texto usando variable */
     color: var(--color-letra-boton-vista-admin);
 }
