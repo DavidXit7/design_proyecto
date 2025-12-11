@@ -205,6 +205,7 @@
     justify-content: space-between;
     /* borde */
     border: solid 2px var(--color-borde-card);
+    background-color: var(--color-fondo-card);
     /* esquinas redondeadas */
     border-radius: 20px;
     /* margen externo */

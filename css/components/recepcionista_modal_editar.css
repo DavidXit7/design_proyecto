@@ -205,6 +205,8 @@
     justify-content: space-between;
     /* borde de la tarjeta */
     border: solid 2px var(--color-borde-card);
+
+    background-color: var(--color-fondo-card);
     /* esquinas redondeadas */
     border-radius: 20px;
     /* margen externo */
