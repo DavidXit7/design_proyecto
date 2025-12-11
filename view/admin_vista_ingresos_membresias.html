@@ -1,77 +1,93 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Panel administrador</title>
+    <title>Ingresos por Membresías - Estadísticas</title>
     <link rel="stylesheet" href="../css/components/admin_vista_ingresos_membresias.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
+
 <body class="body">
-    <header class="header"> 
+    <header class="header">
         <div class="logo_container">
             <img class="header__logo" src="../assets/img/logo_power.png" alt="warrior_gym">
             <h1 class="titulo__logo">WARRIOR GYM</h1>
         </div>
-    <nav class="nav__header">
-        <ul class="header__lista">
-            <div class="header__lista--link">
-                <li>admin01</li>
-            </div>
+        <nav class="nav__header">
+            <ul class="header__lista">
+                <div class="header__lista--link">
+                    <li>admin01</li>
+                </div>
 
-            <div class="header__lista--link">
-                <li>administrador</li>
-            </div>
-            <li><a class="header__links" href="../index.html">cerrar sesion<i class="fas fa-door-open"></i></a></li>
-        </ul>
-    </nav>
+                <div class="header__lista--link">
+                    <li>administrador</li>
+                </div>
+                <li><a class="header__links" href="../index.html">cerrar sesion<i class="fas fa-door-open"></i></a></li>
+            </ul>
+        </nav>
     </header>
 
     <aside class="sidebar">
         <nav class="sidebar__nav">
             <div class="boton__sidebar--nav">
-                <a class="sidebar__lista--link" href="/view/admin_crear_recepcionistas.html">Registrar recepcionistas</a>
+                <a class="sidebar__lista--link" href="/view/admin_crear_recepcionistas.html">Registrar
+                    recepcionistas</a>
             </div>
 
             <div class="boton__sidebar--nav">
-                <a class="sidebar__lista--link" href="">Crear membresias</a>
+                <a class="sidebar__lista--link" href="/view/admin_membresias.html">Crear membresias</a>
             </div>
 
             <div class="boton__sidebar--nav">
                 <a class="sidebar__lista--link" href="/view/admin_estadisticas.html">Ver estadisticas</a>
             </div>
         </nav>
-    </aside>    
+    </aside>
 
     <main class="main">
-        <div class="main__titulo" >
-            <h1>Ingresos por mes de cada membresia</h1>
+        <h1 class="titulo__main">Ingresos por Tipo de Membresía</h1>
+
+        <div class="grafico__contenedor">
+            <div class="grafico__pie"></div>
+            <div class="leyenda__pie">
+                <div class="leyenda__item">
+                    <span class="leyenda__color leyenda__color--mensual"></span>
+                    <div class="leyenda__texto">
+                        <span class="leyenda__nombre">Mensual</span>
+                        <span class="leyenda__porcentaje">30% - $3,000</span>
+                    </div>
+                </div>
+                <div class="leyenda__item">
+                    <span class="leyenda__color leyenda__color--trimestral"></span>
+                    <div class="leyenda__texto">
+                        <span class="leyenda__nombre">Trimestral</span>
+                        <span class="leyenda__porcentaje">20% - $2,000</span>
+                    </div>
+                </div>
+                <div class="leyenda__item">
+                    <span class="leyenda__color leyenda__color--semestral"></span>
+                    <div class="leyenda__texto">
+                        <span class="leyenda__nombre">Semestral</span>
+                        <span class="leyenda__porcentaje">30% - $3,000</span>
+                    </div>
+                </div>
+                <div class="leyenda__item">
+                    <span class="leyenda__color leyenda__color--anual"></span>
+                    <div class="leyenda__texto">
+                        <span class="leyenda__nombre">Anual</span>
+                        <span class="leyenda__porcentaje">20% - $2,000</span>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="contenedor__main">
 
-            <div class="cuadro__item"></div>
-            <div class="main__items">
-                Mensual
-            </div>
-
-            <div class="cuadro__item"></div>
-            <div class="main__items">
-                Trimestral
-            </div>
-
-            <div class="cuadro__item"></div>
-            <div class="main__items">
-                Semestral
-            </div>
-
-            <div class="cuadro__item"></div>
-            <div class="main__items">
-                Anual
-            </div>
-        </div>
-            
-        <div class="main__grafico">
+        <div class="total__ingresos">
+            <span>Total de Ingresos: </span>
+            <span class="total__valor">$10,000</span>
         </div>
     </main>
 </body>
+
 </html>

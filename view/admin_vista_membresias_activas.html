@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Panel administrador</title>
+    <title>Membresías Activas - Estadísticas</title>
     <link rel="stylesheet" href="../css/components/admin_vista_membresias_activas.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
@@ -34,7 +34,7 @@
             </div>
 
             <div class="boton__sidebar--nav">
-                <a class="sidebar__lista--link" href="">Crear membresias</a>
+                <a class="sidebar__lista--link" href="/view/admin_membresias.html">Crear membresias</a>
             </div>
 
             <div class="boton__sidebar--nav">
@@ -44,28 +44,50 @@
     </aside>    
 
     <main class="main">
+        <h1 class="titulo__main">Membresías Activas: 134</h1>
 
-        <h1 class="titulo__main" >Membresias activas: 134</h1>
-
-        <div class="numeros__grafico">
-            <p>100</p>
-            <p>90</p>
-            <p>80</p>
-            <p>70</p>
-            <p>60</p>
-            <p>50</p>
-            <p>40</p>
-            <p>30</p>
-            <p>20</p>
-            <p>10</p>
-            <p>0</p>
+        <div class="grafico__contenedor">
+            <div class="eje-y">
+                <span>100</span>
+                <span>80</span>
+                <span>60</span>
+                <span>40</span>
+                <span>20</span>
+                <span>0</span>
+            </div>
+            <div class="barras__contenedor">
+                <div class="barra__grupo">
+                    <div class="barra barra--mensual" style="height: 50%;">
+                        <span class="barra__valor">50</span>
+                    </div>
+                    <span class="barra__label">Mensual</span>
+                </div>
+                <div class="barra__grupo">
+                    <div class="barra barra--trimestral" style="height: 75%;">
+                        <span class="barra__valor">75</span>
+                    </div>
+                    <span class="barra__label">Trimestral</span>
+                </div>
+                <div class="barra__grupo">
+                    <div class="barra barra--semestral" style="height: 25%;">
+                        <span class="barra__valor">25</span>
+                    </div>
+                    <span class="barra__label">Semestral</span>
+                </div>
+                <div class="barra__grupo">
+                    <div class="barra barra--anual" style="height: 45%;">
+                        <span class="barra__valor">45</span>
+                    </div>
+                    <span class="barra__label">Anual</span>
+                </div>
+            </div>
         </div>
 
-        <div class="main__grafico">
-            <div class="barra__grafico_1">Mensual</div>
-            <div class="barra__grafico_2">Trimestral</div>
-            <div class="barra__grafico_3">Semestral</div>
-            <div class="barra__grafico_4">Anual</div>
+        <div class="leyenda">
+            <div class="leyenda__item"><span class="leyenda__color leyenda__color--mensual"></span>Mensual</div>
+            <div class="leyenda__item"><span class="leyenda__color leyenda__color--trimestral"></span>Trimestral</div>
+            <div class="leyenda__item"><span class="leyenda__color leyenda__color--semestral"></span>Semestral</div>
+            <div class="leyenda__item"><span class="leyenda__color leyenda__color--anual"></span>Anual</div>
         </div>
     </main>
 </body>
