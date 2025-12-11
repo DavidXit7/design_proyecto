@@ -6,12 +6,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ventas por Membresías - Estadísticas</title>
     <link rel="stylesheet" href="../css/components/admin_vista_ventas_membresias.css">
+    <link rel="stylesheet" href="../css/components/responsive.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 
 <body class="body">
+    <input type="checkbox" id="menu-toggle" class="menu-toggle">
+
     <header class="header">
         <div class="logo_container">
+            <label for="menu-toggle" class="hamburger">
+                <span class="hamburger__linea"></span>
+                <span class="hamburger__linea"></span>
+                <span class="hamburger__linea"></span>
+            </label>
             <img class="header__logo" src="../assets/img/logo_power.png" alt="warrior_gym">
             <h1 class="titulo__logo">WARRIOR GYM</h1>
         </div>
@@ -28,6 +36,8 @@
             </ul>
         </nav>
     </header>
+
+    <label for="menu-toggle" class="sidebar__overlay"></label>
 
     <aside class="sidebar">
         <nav class="sidebar__nav">
@@ -60,7 +70,7 @@
             </div>
             <div class="grafico__linea">
                 <svg class="linea__svg" viewBox="0 0 500 200" preserveAspectRatio="none">
-                    
+
                     <line x1="0" y1="40" x2="500" y2="40" class="grid__linea" />
                     <line x1="0" y1="80" x2="500" y2="80" class="grid__linea" />
                     <line x1="0" y1="120" x2="500" y2="120" class="grid__linea" />
