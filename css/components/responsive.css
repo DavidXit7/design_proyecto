@@ -1,0 +1,648 @@
+/* ============================================
+   RESPONSIVE CSS - Media Queries
+   Mobile: max-width 767px
+   Tablet: 768px - 1023px
+   ============================================ */
+
+/* Checkbox oculto */
+.menu-toggle {
+    display: none;
+}
+
+/* Hamburger Menu Button - Hidden by default */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    background: none;
+    border: none;
+    padding: 5px;
+    z-index: 1001;
+}
+
+.hamburger__linea {
+    width: 25px;
+    height: 3px;
+    background-color: #333;
+    margin: 3px 0;
+    transition: all 0.3s ease;
+    border-radius: 2px;
+}
+
+/* Hamburger Animation when checkbox is checked */
+.menu-toggle:checked~.header .hamburger .hamburger__linea:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+
+.menu-toggle:checked~.header .hamburger .hamburger__linea:nth-child(2) {
+    opacity: 0;
+}
+
+.menu-toggle:checked~.header .hamburger .hamburger__linea:nth-child(3) {
+    transform: rotate(-45deg) translate(7px, -6px);
+}
+
+/* Overlay for sidebar */
+.sidebar__overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+    cursor: pointer;
+}
+
+/* ============================================
+   TABLET: 768px - 1023px
+   ============================================ */
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+    .body {
+        grid-template-columns: 200px 1fr;
+    }
+
+    .header__logo {
+        width: 70px;
+        height: 70px;
+    }
+
+    .titulo__logo {
+        font-size: 20px;
+    }
+
+    .header__lista {
+        font-size: 14px;
+        gap: 10px;
+    }
+
+    .header__lista--link {
+        padding-right: 10px;
+    }
+
+    .sidebar__nav {
+        gap: 40px;
+    }
+
+    .boton__sidebar--nav {
+        font-size: 14px;
+    }
+
+    .sidebar__lista--link {
+        padding: 15px 10px;
+        font-size: 14px;
+    }
+
+    /* ===== MAIN CONTENT TABLET ===== */
+    .main {
+        font-size: 18px;
+        padding: 15px;
+    }
+
+    /* Formularios */
+    .formulario {
+        padding: 20px;
+        margin: 20px;
+        width: 90%;
+        max-width: 500px;
+    }
+
+    .formulario__input {
+        width: 100%;
+    }
+
+    .formulario__titulo {
+        font-size: 20px;
+        text-align: center;
+    }
+
+    .formulario__textarea {
+        width: 100%;
+    }
+
+    /* Estadísticas Cards */
+    .estadisticas__contenedor {
+        gap: 20px;
+        padding: 10px;
+    }
+
+    .estadistica__card {
+        width: 100%;
+        max-width: 350px;
+        height: auto;
+        padding: 25px;
+    }
+
+    /* Gráficos */
+    .grafico__contenedor {
+        width: 90%;
+        padding: 15px;
+    }
+
+    .barras__contenedor {
+        padding: 0 10px;
+    }
+
+    .barra {
+        width: 50px;
+    }
+
+    .grafico__pie {
+        width: 200px;
+        height: 200px;
+    }
+
+    .leyenda__pie {
+        gap: 15px;
+    }
+
+    /* Buscadores */
+    .barra__busqueda {
+        flex-direction: column;
+        width: 90%;
+    }
+
+    .input__barra {
+        width: 100%;
+    }
+
+    .formulario__buscador {
+        width: 90%;
+    }
+
+    .buscador__fila {
+        flex-direction: column;
+    }
+
+    .boton__limpiar {
+        width: 100%;
+    }
+
+    .boton__buscar {
+        width: 100%;
+    }
+
+    /* Icono agregar */
+    .icono__agregar {
+        font-size: 80px;
+    }
+}
+
+/* ============================================
+   MOBILE: max-width 767px
+   ============================================ */
+@media screen and (max-width: 767px) {
+
+    /* Show hamburger button */
+    .hamburger {
+        display: flex;
+    }
+
+    /* Change grid layout */
+    .body {
+        grid-template-columns: 1fr;
+        grid-template-rows: 70px 1fr;
+        grid-template-areas:
+            "header"
+            "main";
+    }
+
+    /* Header adjustments */
+    .header {
+        padding: 0 10px;
+        position: relative;
+    }
+
+    .header__logo {
+        width: 50px;
+        height: 50px;
+    }
+
+    .titulo__logo {
+        font-size: 16px;
+    }
+
+    .nav__header {
+        gap: 10px;
+    }
+
+    .header__lista {
+        font-size: 12px;
+        gap: 8px;
+    }
+
+    .header__lista--link {
+        display: none;
+    }
+
+    .header__links {
+        margin-right: 10px;
+        font-size: 12px;
+    }
+
+    .header__links i {
+        font-size: 16px;
+    }
+
+    /* Sidebar as slide-out menu */
+    .sidebar {
+        position: fixed;
+        top: 0;
+        left: -280px;
+        width: 280px;
+        height: 100vh;
+        z-index: 1000;
+        transition: left 0.3s ease;
+        padding-top: 80px;
+    }
+
+    /* Show sidebar when checkbox is checked */
+    .menu-toggle:checked~.sidebar {
+        left: 0;
+    }
+
+    /* Show overlay when checkbox is checked */
+    .menu-toggle:checked~.sidebar__overlay {
+        display: block;
+    }
+
+    .sidebar__nav {
+        gap: 30px;
+        padding: 20px;
+    }
+
+    .boton__sidebar--nav {
+        width: 100%;
+    }
+
+    .sidebar__lista--link {
+        padding: 15px;
+        font-size: 16px;
+    }
+
+    /* ===== MAIN CONTENT MOBILE ===== */
+    .main {
+        font-size: 16px;
+        padding: 20px 15px;
+        line-height: 1.5;
+        overflow-y: auto;
+    }
+
+    /* Mensajes de bienvenida */
+    .mensaje__bienvenida,
+    .mensaje__fecha,
+    .frase__motivacional {
+        text-align: center;
+        margin-bottom: 15px;
+        font-size: 16px;
+        line-height: 1.4;
+    }
+
+    .frase__motivacional {
+        font-size: 14px;
+        padding: 0 10px;
+    }
+
+    /* ===== FORMULARIOS MOBILE ===== */
+    .formulario__titulo {
+        font-size: 18px;
+        text-align: center;
+        margin-bottom: 20px;
+        padding: 0 10px;
+    }
+
+    .formulario {
+        display: flex;
+        flex-direction: column;
+        width: 95%;
+        padding: 20px 15px;
+        margin: 15px auto;
+    }
+
+    .formulario__label {
+        font-size: 16px;
+    }
+
+    .formulario__input {
+        width: 100%;
+        height: 40px;
+        font-size: 14px;
+    }
+
+    .formulario__textarea {
+        width: 100%;
+        height: 100px;
+    }
+
+    .formulario__boton {
+        width: 100%;
+        height: 45px;
+        font-size: 16px;
+        margin-top: 15px;
+    }
+
+    /* ===== ESTADÍSTICAS CARDS MOBILE ===== */
+    .estadisticas__contenedor {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        width: 100%;
+        padding: 0 15px;
+    }
+
+    .estadistica__card {
+        width: 100%;
+        height: auto;
+        padding: 20px;
+        gap: 15px;
+    }
+
+    .estadistica__card h3 {
+        font-size: 16px;
+        text-align: center;
+    }
+
+    .estadistica__boton {
+        width: 100%;
+        height: 40px;
+    }
+
+    /* ===== GRÁFICOS MOBILE ===== */
+    .titulo__main {
+        font-size: 18px;
+        text-align: center;
+        margin-bottom: 15px;
+    }
+
+    .grafico__contenedor {
+        width: 95%;
+        padding: 15px 10px;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .eje-y {
+        display: none;
+    }
+
+    .barras__contenedor {
+        height: 200px;
+        padding: 0 5px;
+        width: 100%;
+    }
+
+    .barra {
+        width: 45px;
+    }
+
+    .barra__label {
+        font-size: 10px;
+    }
+
+    .barra__valor {
+        font-size: 10px;
+    }
+
+    .leyenda {
+        gap: 10px;
+        font-size: 12px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .leyenda__color {
+        width: 15px;
+        height: 15px;
+    }
+
+    /* Pie chart mobile */
+    .grafico__pie {
+        width: 180px;
+        height: 180px;
+        margin-bottom: 20px;
+    }
+
+    .leyenda__pie {
+        gap: 12px;
+        width: 100%;
+    }
+
+    .leyenda__item {
+        gap: 8px;
+    }
+
+    .leyenda__nombre {
+        font-size: 14px;
+    }
+
+    .leyenda__porcentaje {
+        font-size: 12px;
+    }
+
+    .total__ingresos {
+        font-size: 14px;
+        padding: 12px 20px;
+        text-align: center;
+    }
+
+    /* Line chart mobile */
+    .grafico__linea {
+        width: 100%;
+    }
+
+    .linea__svg {
+        height: 150px;
+    }
+
+    .eje-x {
+        font-size: 11px;
+    }
+
+    .eje-x span {
+        font-size: 10px;
+    }
+
+    .resumen__ventas {
+        flex-direction: column;
+        gap: 15px;
+        width: 100%;
+    }
+
+    .resumen__item {
+        padding: 12px 20px;
+        width: 100%;
+    }
+
+    .resumen__valor {
+        font-size: 20px;
+    }
+
+    /* ===== BUSCADORES MOBILE ===== */
+    .barra__busqueda {
+        flex-direction: column;
+        width: 95%;
+        gap: 10px;
+    }
+
+    .input__barra {
+        width: 100%;
+        font-size: 14px;
+    }
+
+    .boton__barra {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .formulario__buscador {
+        width: 95%;
+    }
+
+    .buscador__fila {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .barra__busqueda input {
+        width: 100%;
+    }
+
+    .boton__limpiar {
+        width: 100%;
+    }
+
+    .boton__buscar {
+        width: 100%;
+    }
+
+    /* ===== ICONO AGREGAR MOBILE ===== */
+    .icono__agregar {
+        font-size: 70px;
+    }
+
+    .icono__agregar+p {
+        font-size: 14px;
+        text-align: center;
+        padding: 0 20px;
+    }
+
+    /* ===== TITULO CONSULTAR ESTADO ===== */
+    .titulo {
+        font-size: 20px;
+        text-align: center;
+        margin-bottom: 25px;
+        padding: 0 15px;
+    }
+
+    /* ===== CARDS RECEPCIONISTA/ADMIN MOBILE ===== */
+    .card__recepcionista,
+    .card__cliente {
+        width: 95%;
+        padding: 15px;
+        margin: 10px auto;
+    }
+
+    .titulo__card {
+        font-size: 16px;
+        text-align: center;
+    }
+
+    .card__header {
+        padding: 10px;
+    }
+
+    .card__descripcion {
+        padding: 15px;
+        font-size: 14px;
+    }
+
+    .card__descripcion p {
+        margin-bottom: 8px;
+    }
+
+    .card__icons {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        padding: 10px;
+    }
+
+    .card__button--link {
+        font-size: 18px;
+    }
+
+    .card__image {
+        max-width: 80px;
+    }
+
+    /* ===== TABLAS MOBILE ===== */
+    .tabla {
+        width: 100%;
+        font-size: 12px;
+        overflow-x: auto;
+        display: block;
+    }
+
+    .tabla th,
+    .tabla td {
+        padding: 8px 5px;
+    }
+
+    .titulos__tabla th {
+        font-size: 11px;
+    }
+
+    .datos__tabla td {
+        font-size: 11px;
+    }
+
+    /* ===== MODALES/VENTANAS MOBILE ===== */
+    .contenedor,
+    .contenedor_formulario {
+        width: 100%;
+        padding: 15px;
+    }
+
+    .ventana {
+        width: 95%;
+        max-width: 350px;
+        margin: 0 auto;
+    }
+
+    .mensaje__ventana {
+        padding: 20px 15px;
+        font-size: 14px;
+    }
+
+    .titulo__ventana {
+        font-size: 18px;
+        margin-bottom: 15px;
+    }
+
+    .mensaje__ventana p {
+        margin-bottom: 10px;
+        font-size: 14px;
+    }
+
+    .cerrar {
+        display: inline-block;
+        margin-top: 15px;
+        padding: 10px 20px;
+    }
+
+    .opciones {
+        display: flex;
+        gap: 15px;
+        justify-content: center;
+        margin-top: 15px;
+    }
+
+    .opciones .cerrar {
+        margin-top: 0;
+    }
+}
