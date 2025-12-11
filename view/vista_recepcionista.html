@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panel recepcionista</title>
+    <link rel="stylesheet" href="../css/components/vista_recepcionista.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body class="body">
+    <header class="header"> 
+        <div class="logo_container">
+            <img class="header__logo" src="../assets/img/logo_power.png" alt="warrior_gym">
+            <h1 class="titulo__logo">WARRIOR GYM</h1>
+        </div>
+    <nav class="nav__header">
+        <ul class="header__lista">
+            <div class="header__lista--link">
+                <li>recep</li>
+            </div>
+
+            <div class="header__lista--link">
+                <li>recepcionista</li>
+            </div>
+            <li><a class="header__links" href="../index.html">cerrar sesion<i class="fas fa-door-open"></i></a></li>
+        </ul>
+    </nav>
+    </header>
+
+    <aside class="sidebar">
+        <nav class="sidebar__nav">
+            <div class="boton__sidebar--nav">
+                <a class="sidebar__lista--link" href="/view/recepcionista_agregar_cliente.html">Registrar clientes</a>
+            </div>
+
+            <div class="boton__sidebar--nav">
+                <a class="sidebar__lista--link" href="recepcionista_validar_acceso.html">Validar accesos</a>
+            </div>
+
+            <div class="boton__sidebar--nav">
+                <a class="sidebar__lista--link" href="">Consultar estado clientes</a>
+            </div>
+        </nav>
+    </aside>
+
+    <main class="main">
+        <div class="mensaje__bienvenida">
+            👋🏻 Bienvenido recepcionista, <strong> John wick</strong>!
+        </div>
+
+        <div class="mensaje__fecha">
+            📅 Hoy es: <span id="fecha">11 de diciembre de 2025</span>
+        </div>
+
+        <div class="frase__motivacional">
+            "No mires al pasado, sigue adelante y solo adelante"
+        </div>
+    </main>
+</body>
+</html>

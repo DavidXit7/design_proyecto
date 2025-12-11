@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panel recepcionista</title>
+    <link rel="stylesheet" href="../css/components/recepcionista_modal_eliminar.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body class="body">
+    <header class="header"> 
+        <div class="logo_container">
+            <img class="header__logo" src="../assets/img/logo_power.png" alt="warrior_gym">
+            <h1 class="titulo__logo">WARRIOR GYM</h1>
+        </div>
+    <nav class="nav__header">
+        <ul class="header__lista">
+            <div class="header__lista--link">
+                <li>recep</li>
+            </div>
+
+            <div class="header__lista--link">
+                <li>recepcionista</li>
+            </div>
+            <li><a class="header__links" href="../index.html">cerrar sesion<i class="fas fa-door-open"></i></a></li>
+        </ul>
+    </nav>
+    </header>
+
+    <aside class="sidebar">
+        <nav class="sidebar__nav">
+            <div class="boton__sidebar--nav">
+                <a class="sidebar__lista--link" href="/view/recepcionista_agregar_cliente.html">Registrar clientes</a>
+            </div>
+
+            <div class="boton__sidebar--nav">
+                <a class="sidebar__lista--link" href="">Validar accesos</a>
+            </div>
+
+            <div class="boton__sidebar--nav">
+                <a class="sidebar__lista--link" href="">Consultar estado clientes</a>
+            </div>
+        </nav>
+    </aside>
+
+    <main class="main">
+        <h1 class="titulo__main">Dashboard clientes registrados</h1>
+
+        <div class="card__recepcionista">
+            <div class="card__header">
+                <h1 class="titulo__card">Cliente 1</h1>
+            </div>
+
+            <div class="card__descripcion">
+                <p><b>Nombre:</b> cramirez</p>
+                <p><b>Correo:</b> carlos_ramirez34@gmail.com</p>
+                <p><b>Registrado:</b> 07/12/2025</p>
+            </div>
+
+            <div class="card__icons">
+                <a href="" class="card__button--link">
+                    <i class="fa-solid fa-eye"></i>
+                </a>
+
+                <a href="" class="card__button--link">
+                    <i class="fa-solid fa-pen-to-square"></i>
+                </a>
+
+                <a href="" class="card__button--link">
+                    <i class="fa-solid fa-trash"></i>
+                </a>
+
+            </div>
+            
+            <div class="contenedor">
+                <div class="ventana">
+                    <div class="mensaje__ventana">
+                        <p>¿Desea eliminar esta membresia?</p>
+                    <div class="opciones">
+                        <a href="" class="cerrar">Si</a> 
+                        <a href="" class="cerrar">No</a>
+                </div>
+            </div>
+        </div>
+        </div>
+    </main>
+</body>
+</html>

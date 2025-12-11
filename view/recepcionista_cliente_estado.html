@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panel recepcionista</title>
+    <link rel="stylesheet" href="../css/components/recepcionista_cliente_estado.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body class="body">
+    <header class="header"> 
+        <div class="logo_container">
+            <img class="header__logo" src="../assets/img/logo_power.png" alt="warrior_gym">
+            <h1 class="titulo__logo">WARRIOR GYM</h1>
+        </div>
+    <nav class="nav__header">
+        <ul class="header__lista">
+            <div class="header__lista--link">
+                <li>recep</li>
+            </div>
+
+            <div class="header__lista--link">
+                <li>recepcionista</li>
+            </div>
+            <li><a class="header__links" href="../index.html">cerrar sesion<i class="fas fa-door-open"></i></a></li>
+        </ul>
+    </nav>
+    </header>
+
+    <aside class="sidebar">
+        <nav class="sidebar__nav">
+            <div class="boton__sidebar--nav">
+                <a class="sidebar__lista--link" href="/view/recepcionista_agregar_cliente.html">Registrar clientes</a>
+            </div>
+
+            <div class="boton__sidebar--nav">
+                <a class="sidebar__lista--link" href="">Validar accesos</a>
+            </div>
+
+            <div class="boton__sidebar--nav">
+                <a class="sidebar__lista--link" href="">Consultar estado clientes</a>
+            </div>
+        </nav>
+    </aside>
+
+    <main class="main">
+        <h1 class="titulo">Consultar estado clientes</h1>
+
+        <form class="barra__busqueda">
+            <input class="input__barra" type="text" placeholder="Digita el documento" name="search">
+            <button class="boton__barra" type="submit">
+                <i class="fa fa-search"></i>Buscar
+            </button>
+        </form>
+
+
+        <table class="tabla" border="1">
+            <tr class="titulos__tabla">
+                <th>Nombre</th>
+                <th>Documento</th>
+                <th>Estado</th>
+                <th>Último acceso</th>
+                <th>Tipo membresia</th>
+            </tr>
+            <tr class="datos__tabla">
+                <td>Juan Pérez</td>
+                <td>12345678</td>
+                <td>Activo</td>
+                <td>05/12/2025</td>
+                <td>Mensual</td>
+            </tr>
+        </table>
+    </main>
+</body>
+</html>
