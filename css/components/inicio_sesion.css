@@ -39,7 +39,6 @@
     justify-content: center;
     align-items: center;
     padding: 40px;
-    background-color: var(--color-fondo);
 }
 
 .formulario__contenido {
